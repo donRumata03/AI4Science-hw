@@ -14,4 +14,5 @@ are preserved in git. Live-inference notebook exercises were not run.
 Next research step: fix experimental controls and metric preprocessing before code.
 
 Formatting: redundant generated labels removed from task/class infrastructure;
-research provenance retained. The final report is unchanged byte-for-byte.
+research provenance retained. The final report matches the user-edited output file.
+GitHub destination: https://github.com/donRumata03/AI4Science-hw (main).

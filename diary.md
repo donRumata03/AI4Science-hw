@@ -80,3 +80,10 @@ Removed generated labels from task descriptions and class definitions. Updated t
 agent rule to scope provenance labels to course reports and research notes. Preserved
 source references, substantive research provenance and the append-only diary history.
 Final report SHA-256 remains eb0a8f2d1e28df4bbbfea00eb080a6a2f4b2ee807ff230ee1845ff547efd6dd0.
+
+## 2026-10-22 - adopt user-edited final report and publish
+
+The user supplied the authoritative final report in outputs/AI4Science-HW1-report.md
+and explicitly requested commit/push to donRumata03/AI4Science-hw. Copied that file
+byte-for-byte to reports/hw1.md without rewriting its content. The destination
+repository was empty when inspected; the existing main branch will be published.
