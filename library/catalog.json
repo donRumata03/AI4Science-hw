@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-21",
+  "scope": "Seed library: 3 documents; homework requires at least 20. Full PDF reading is pending.",
+  "documents": [
+    {
+      "arxiv_id": "2610.14162",
+      "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+      "authors": [
+        "Hermann Kumbong",
+        "Ishan S. Khare",
+        "Iddah Mlauzi",
+        "Andrew Woen",
+        "Charles Ding",
+        "E. Kelly Buchanan",
+        "Simran Arora",
+        "Azalia Mirhoseini",
+        "Christopher Ré"
+      ],
+      "version": "v1",
+      "source_url": "https://arxiv.org/abs/2610.14162v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.14162v1",
+      "retrieved_at": "2026-10-21",
+      "pdf_path": "library/pdf/2610.14162v1.pdf",
+      "pages": 40,
+      "sha256": "708a029c7f53d4f9f04ca5c93865afc9b3b5414acab3d7d9b887f313d04a5b4d",
+      "reading_status": "metadata_and_abstract_checked_pdf_downloaded",
+      "note_path": "notes/paper-ncm.md"
+    },
+    {
+      "arxiv_id": "2510.08632",
+      "title": "Next Semantic Scale Prediction via Hierarchical Diffusion Language Models",
+      "authors": [
+        "Cai Zhou",
+        "Chenyu Wang",
+        "Dinghuai Zhang",
+        "Shangyuan Tong",
+        "Yifei Wang",
+        "Stephen Bates",
+        "Tommi Jaakkola"
+      ],
+      "version": "v1",
+      "source_url": "https://arxiv.org/abs/2510.08632v1",
+      "pdf_url": "https://arxiv.org/pdf/2510.08632v1",
+      "retrieved_at": "2026-10-21",
+      "pdf_path": "library/pdf/2510.08632v1.pdf",
+      "pages": 29,
+      "sha256": "1da321a27361a67e695d40e71a5314faef016ee93917de549ecfafc2a091517c",
+      "reading_status": "metadata_and_abstract_checked_pdf_downloaded",
+      "note_path": "notes/paper-hdlm.md"
+    },
+    {
+      "arxiv_id": "2610.08738",
+      "title": "Denoising Hierarchical Representations: Joint Continuous Diffusion for Language Modeling",
+      "authors": [
+        "Mathias Ollu",
+        "Nikos Komodakis"
+      ],
+      "version": "v1",
+      "source_url": "https://arxiv.org/abs/2610.08738v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.08738v1",
+      "retrieved_at": "2026-10-21",
+      "pdf_path": "library/pdf/2610.08738v1.pdf",
+      "pages": 27,
+      "sha256": "3f91f467a597fffc299a630d1452a8a129808a4622afd4c3937f792c4451a8fb",
+      "reading_status": "metadata_and_abstract_checked_pdf_downloaded",
+      "note_path": "notes/paper-h-cdlm.md"
+    }
+  ]
+}
