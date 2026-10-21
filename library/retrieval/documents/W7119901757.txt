@@ -1,0 +1,5 @@
+STaRR: Spatial-Temporal Token-Dynamics-Aware Responsive Remasking for Diffusion Language Models
+
+Diffusion Language Models (DLMs) enable parallel decoding via iterative denoising, where remasking strategies play a critical role in balancing inference speed and output quality. Existing methods predominantly rely on static confidence thresholds, overlooking the spatial-temporal dynamics of token confidence, causing unnecessary remasking. We propose Spatial-Temporal Token-Dynamics-Aware Responsive Remasking (STaRR), a training-free framework that dynamically adapts remasking decisions based on token confidence evolution. STaRR introduces two metrics, temporal variance and spatial deviance, to guide fine-grained, step-wise dynamic thresholding. We further introduce a step-wise dynamic thresholding strategy, further enhanced with responsiveness optimizations for scalability and robustness. Experiments show that STaRR achieves an average speedup of 4.1 and up to 8.9 while maintaining comparable accuracy.
+
+Source: https://openalex.org/W7119901757

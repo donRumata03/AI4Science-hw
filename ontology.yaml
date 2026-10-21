@@ -42,6 +42,8 @@ relations:
     - Task
     - Report
     - GraphQuery
+    - Concept
+    - Author
     range_kind: class
   describes:
     domain:

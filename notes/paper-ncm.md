@@ -33,3 +33,4 @@ Reported GenPPL/entropy and dataset-specific reconstruction are not our reproduc
 - type: [[ontology/Source]]
 - describes: [[notes/ncm]]
 - storedIn: [[library/pdf/2610.14162v1.pdf]]
+- writtenBy: [[notes/author-2610.14162]]

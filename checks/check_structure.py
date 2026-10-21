@@ -14,12 +14,25 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = (
-    "AGENTS.md", "STATUS.md", "diary.md", "INDEX.md", "README.md",
-    "docs/course.md", "docs/project.md", "docs/workflow.md",
-    "docs/external-workspace.md", "library/catalog.json", "library/README.md",
-    "memory/L1.md", "memory/L2.md", "memory/L3.md", "memory/verification.md",
-    "ontology.yaml", ".obsidian/app.json", ".obsidian/graph.json",
-    "reports/hw1.md", "reports/my_search_report.md", "tasks/research.md",
+    'AGENTS.md',
+    'STATUS.md',
+    'diary.md',
+    'INDEX.md',
+    'README.md',
+    'docs/project.md',
+    'library/catalog.json',
+    'library/README.md',
+    'memory/L1.md',
+    'memory/L2.md',
+    'memory/L3.md',
+    'memory/verification.md',
+    'ontology.yaml',
+    '.obsidian/app.json',
+    '.obsidian/graph.json',
+    'reports/hw1.md',
+    'reports/my_search_report.md',
+    'tasks/research.md',
+    'search_lab_ncm.ipynb',
 )
 
 
@@ -49,7 +62,7 @@ def main():
             target = target.split("|", 1)[0].split("#", 1)[0]
             links_checked += 1
             candidate = ROOT / target
-            if not candidate.exists() and not candidate.with_suffix(".md").exists():
+            if not candidate.exists() and not Path(str(candidate) + ".md").exists():
                 errors.append(f"Broken wiki link: {path.relative_to(ROOT)} -> {target}")
 
     catalog_path = ROOT / "library/catalog.json"

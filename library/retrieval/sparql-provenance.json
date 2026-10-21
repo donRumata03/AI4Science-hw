@@ -1,0 +1,9 @@
+{
+  "endpoint": "https://query.wikidata.org/sparql",
+  "retrieved": "2026-10-21",
+  "status_code": 200,
+  "query_file": "library/retrieval/sparql-query.rq",
+  "response_file": "library/retrieval/sparql-response.json",
+  "bindings": 5,
+  "purpose": "Place the NCM methods in their external machine-learning research context; taxonomy only, no claim about model quality."
+}

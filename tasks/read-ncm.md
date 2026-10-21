@@ -26,7 +26,7 @@ Training, benchmark reproduction or claims of experimental improvement.
 
 ## Result
 
-Completed bounded research artifact: [report](../reports/paper-review.md). No user acceptance is inferred.
+Completed bounded research artifact: [report](../reports/hw1.md). No user acceptance is inferred.
 
 ## Links
 - type: [[ontology/Task]]

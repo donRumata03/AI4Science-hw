@@ -1,0 +1,103 @@
+{
+  "head" : {
+    "vars" : [ "item", "itemLabel", "class", "classLabel" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2539"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1047113"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "machine learning"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "field of study"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2539"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2267705"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "machine learning"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "field of study"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2539"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q11862829"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "machine learning"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "academic discipline"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2539"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q123370638"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "machine learning"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "branch of computer science"
+      }
+    }, {
+      "item" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2539"
+      },
+      "class" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q130609847"
+      },
+      "itemLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "machine learning"
+      },
+      "classLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "learning approach"
+      }
+    } ]
+  }
+}

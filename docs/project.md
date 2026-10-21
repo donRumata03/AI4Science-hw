@@ -1,32 +1,22 @@
-# Research scope
+# Research context
 
-[generated] Can conditional diffusion improve the quality/diversity/compute frontier
-of Next-Concept Modeling by modeling dependencies inside one discrete code level?
+[generated] Primary question: can iterative conditional generation improve the joint
+distribution of codes inside one NCM level while keeping its tokenizer fixed?
+Model implementation in this repository has not started.
 
-## Primary study
+- First study: freeze tokenizer, codebooks and decoder; keep levels sequential;
+  denoise the current level conditioned on previous levels and visible current codes.
+- Evaluate quality, diversity and compute under one protocol with a matched one-pass
+  fine-tuning control. Neither low GenPPL nor low NFE alone establishes improvement.
+- Later ideas: informative continuous prefixes with reconstruction losses; joint
+  representation learning; generate one level and the beginning of the next together.
+  These are proposals, not completed results or requirements of the first experiment.
+- Distinguish residual code levels (NCM), vocabulary ancestors (HDLM), and jointly
+  diffused token/cluster modalities (H-CDLM). Source cards and memory retain PDF pages.
 
-Keep the NCM tokenizer, codebooks, reconstruction operators and text decoder fixed.
-Keep levels sequential. Replace one-pass current-level prediction with iterative
-denoising conditioned on earlier levels and the visible/noisy current-level codes.
-The input is `(previous-level reconstruction, noisy current-level codes, noise state)`;
-the output is a sampled complete level. This is a hypothesis, not an implemented result.
-
-Before implementation, establish the relevant paper assumptions, an evaluation
-protocol, a matched one-pass fine-tuning control, and explicit compute accounting.
-MAUVE, n-gram diversity, GenPPL, entropy, NFE and wall time serve different purposes;
-their definitions and preprocessing must be pinned before comparisons.
-
-## Deferred branches
-
-- Group adjacent levels, or jointly generate a level and the beginning of the next;
-  define remasking and conditioning without ground-truth leakage.
-- Build informative continuous latent prefixes using reconstruction losses, then
-  consider joint representation/generator training.
-- Change conditioning compression, generation paths, or alignment only as separate ablations.
-
-## Current deliverables
-
-Paper reviews, a verified summary hierarchy, literature-search records, and a concise
-research design. Model implementation has not started in this repository.
-See [context](research-context.md) for attribution and [task protocols](task-protocols.md)
-for acceptance and verification. Course packaging is tracked separately.
+[source] Research intent: chats
+`6ad0e66b-2738-83eb-98ea-2112c0c2aacd` and
+`6ad62397-44dc-83eb-9770-39f494b040c6`, plus
+[Notion NCM](https://app.notion.com/p/3fa2d7fdcb1280c59884d800c22d9e03).
+Notion ideas are unverified proposals. The external experimental workspace is separate;
+its historical results are not reproduced or imported into this submission.

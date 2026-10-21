@@ -33,3 +33,4 @@ Core modality/schedule claims are reviewed; published benchmark gains are not in
 - type: [[ontology/Source]]
 - describes: [[notes/h-cdlm]]
 - storedIn: [[library/pdf/2610.08738v1.pdf]]
+- writtenBy: [[notes/author-2610.08738]]

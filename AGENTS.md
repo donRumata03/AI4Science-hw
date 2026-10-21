@@ -10,12 +10,12 @@ Run `python checks/check_structure.py`; evidence checks never replace scientific
 
 ## 2. Context
 Read `STATUS.md` and `INDEX.md` first; load only files needed for the active task.
-Research scope and source provenance: `docs/project.md` and `docs/research-context.md`.
+Research scope and source provenance: `docs/project.md`.
 
 ## 3. Language and tools
 Write all project files in English, including AGENTS.md, memory, status, notes and reports,
 even when the conversation is in Russian. Preserve source identifiers and original PDFs.
-Use Python, git, PDF reading and search; dependency: `checks/requirements.txt`.
+Use Python, git, PDF reading and search; dependencies: `checks/search-requirements.txt`.
 
 ## 4. Boundaries
 [window] Do not invent references, findings, experiment results or user acceptance.

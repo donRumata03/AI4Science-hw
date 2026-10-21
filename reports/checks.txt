@@ -1,0 +1,12 @@
+python checks/check_structure.py
+PASS: required files, 157 local links, pinned PDF digests.
+Scope: structure only; article claims, graph rules and homework remain ungraded.
+python checks/check_evidence.py
+PASS: 8 L2 claims; 6 reviewed evidence locations; L1/L3; English policy.
+Scope: evidence location/integrity and document shape; no semantic proof or human acceptance.
+python checks/check_graph.py
+PASS: 11 classes, 3 rules, 46 typed objects; types, relations, provenance and task outcomes consistent.
+No global OWL reasoning or user acceptance is inferred.
+python checks/check_week5.py
+PASS: 27 corpus documents, 5 BM25/vector queries, normalized vectors, nonempty executed SPARQL and provenance.
+Abstract-corpus retrieval evidence; no full-text review or statistical relevance benchmark is inferred.

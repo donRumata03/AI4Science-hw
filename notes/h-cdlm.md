@@ -9,3 +9,4 @@ type: Method
 - type: [[ontology/Method]]
 - basedOn: [[notes/paper-h-cdlm]]
 - comparedWith: [[notes/ncm]]
+- researchField: [[notes/machine-learning]]

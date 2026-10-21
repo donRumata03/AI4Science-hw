@@ -1,39 +1,23 @@
-# Hierarchical text generation research
+# AI4Science research submission
 
-[generated] Research question: can iterative conditional generation improve the joint
-distribution of codes inside an NCM level while preserving its learned tokenizer?
-This repository currently contains literature analysis and research design.
-**Model implementation: not started.** Research tooling lives in `checks/`; `src/` is empty.
+Research: conditional diffusion inside an NCM level. Model code has not started;
+this package contains the required environment, memory, graph and retrieval evidence.
 
-## Start here
+- [Final report](reports/hw1.md)
+- [Search report](reports/my_search_report.md)
+- [File index](INDEX.md)
+- [Research context](docs/project.md)
 
-- [Research scope](docs/project.md): the primary question and deferred branches.
-- [Concise context](docs/research-context.md): distilled ideas from the two chats and Notion.
-- [Current status](STATUS.md) and [file map](INDEX.md).
-- [Task protocols](docs/task-protocols.md): acceptance, verifier, mode and stop conditions.
-
-## Research outputs
-
-Three pinned PDFs are in `library/pdf/`; provenance and SHA-256 are in
-[catalog.json](library/catalog.json). NCM is the primary paper for the L1/L2/L3
-memory hierarchy. HDLM and H-CDLM are comparison sources, not interchangeable
-implementations of the proposed NCM experiment.
-
+Run from the repository root:
 ```powershell
-Set-Location C:\dev\Education\AI4Science
-python -m pip install -r checks/requirements.txt
-python checks/check_structure.py
-python checks/check_evidence.py
-python checks/agent_loop_demo.py
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -r checks/search-requirements.txt
+.venv/Scripts/python.exe checks/check_structure.py
+.venv/Scripts/python.exe checks/check_evidence.py
+.venv/Scripts/python.exe checks/check_graph.py
+.venv/Scripts/python.exe checks/check_week5.py
 ```
 
-Existing external experiments are documented only by pointers in
-[external-workspace.md](docs/external-workspace.md). No training is launched here.
-
-Course evidence is a secondary view of the same research outputs:
-[course requirements](docs/course.md) and [weeks 1-3 report](reports/weeks-1-3.md).
-Weeks 4-5 remain future work. No remote repository is configured.
-
-Completed current outputs: [NCM memory](memory/README.md),
-[three-method comparison](reports/hierarchy-comparison.md), and
-[source-review outcome](reports/paper-review.md).
+`search_lab_ncm.ipynb` inspects the executed own-topic notebook adaptation.
+`checks/run_search_lab.py` refreshes retrieval; saved results allow offline verification.
+All maintained project files are English. Source PDFs remain original.

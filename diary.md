@@ -53,3 +53,23 @@ Paper-review tasks are done, not user-accepted. Next: research design and target
 [generated] Extended the class hierarchy and competency questions; added a reusable
 closed-world graph verifier. Done tasks require report evidence; human acceptance
 is not inferred. The next block adds actual retrieval and external graph provenance.
+
+## 2026-10-21 - retrieval and graph enrichment block
+
+[source] Adapted search_lab.ipynb section 14 and executed five BM25/neural queries
+on 27 title/abstract documents. Saved original requests, vectors and all top-5
+rankings. SPARQL returned 5 bindings with provenance and graph links.
+[generated] Reviewed all top-3 result pairs; documented a motion-generation false
+positive and possible alternate MAUVE records. No gold-set quality claim is made.
+
+## 2026-10-21 - concise submission package
+
+[written] The user requested a concise English report and only homework-required
+artifacts. [generated] Consolidated the final report and removed duplicate reports,
+optional driver simulation and redundant workflow documents. Preserved history in git;
+retained research context, memory, graph, sources, retrieval evidence and necessary checks.
+
+[source] Final checks passed: 157 local links; six memory evidence locations;
+11 classes, 3 rules and 46 typed objects; 27 documents, five BM25/vector queries
+and a nonempty provenance-linked SPARQL response. A wiki-link filename handling
+bug for dotted arXiv IDs was fixed; no acceptance rule was relaxed.

@@ -1,6 +1,6 @@
 ---
 type: Task
-status: open
+status: done
 ---
 # Search and screen additional literature
 

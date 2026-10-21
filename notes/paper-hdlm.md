@@ -33,3 +33,4 @@ A vocabulary hierarchy is not a learned sequence-level residual tokenizer; no ma
 - type: [[ontology/Source]]
 - describes: [[notes/hdlm]]
 - storedIn: [[library/pdf/2510.08632v1.pdf]]
+- writtenBy: [[notes/author-2510.08632]]
