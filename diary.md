@@ -73,3 +73,10 @@ retained research context, memory, graph, sources, retrieval evidence and necess
 11 classes, 3 rules and 46 typed objects; 27 documents, five BM25/vector queries
 and a nonempty provenance-linked SPARQL response. A wiki-link filename handling
 bug for dotted arXiv IDs was fixed; no acceptance rule was relaxed.
+
+## 2026-10-22 - remove redundant infrastructure labels
+
+Removed generated labels from task descriptions and class definitions. Updated the
+agent rule to scope provenance labels to course reports and research notes. Preserved
+source references, substantive research provenance and the append-only diary history.
+Final report SHA-256 remains eb0a8f2d1e28df4bbbfea00eb080a6a2f4b2ee807ff230ee1845ff547efd6dd0.

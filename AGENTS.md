@@ -31,7 +31,8 @@ do not change acceptance criteria to make a failed verification pass.
 
 ## 6. Memory
 Rewrite STATUS.md after each block; append decisions, checks and outcomes to diary.md.
-Commit messages explain why. Use [generated], [written] and [source] provenance labels.
+Commit messages explain why. Keep provenance labels in course reports and research notes;
+routine instructions, task descriptions and class definitions do not need them.
 
 ## 7. Stop
 Finish a block when its criteria pass. A missing scientific premise stays an open question;

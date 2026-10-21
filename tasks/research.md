@@ -6,7 +6,7 @@ status: in_progress
 
 ## Outcome
 
-[generated] Develop a source-grounded research design, then implement only as a separate scoped task.
+Develop a source-grounded research design, then implement only as a separate scoped task.
 
 ## Acceptance criteria
 

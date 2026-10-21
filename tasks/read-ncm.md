@@ -6,7 +6,7 @@ status: done
 
 ## Outcome
 
-[generated] Analyze the primary paper for the within-level dependence question.
+Analyze the primary paper for the within-level dependence question.
 
 ## Acceptance criteria
 

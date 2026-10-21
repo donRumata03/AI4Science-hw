@@ -6,7 +6,7 @@ status: done
 
 ## Outcome
 
-[generated] Build evidence for unresolved research questions; retain search provenance.
+Build evidence for unresolved research questions; retain search provenance.
 
 ## Acceptance criteria
 

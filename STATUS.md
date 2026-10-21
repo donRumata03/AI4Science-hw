@@ -1,4 +1,4 @@
-# Status - 2026-10-21
+# Status - 2026-10-22
 
 Research preparation complete for the submitted scope. Model implementation: not
 started. No training or new model-quality measurements were performed here.
@@ -12,3 +12,6 @@ acceptance of week-4 practice is not recorded. Two actual graph-related work blo
 are preserved in git. Live-inference notebook exercises were not run.
 
 Next research step: fix experimental controls and metric preprocessing before code.
+
+Formatting: redundant generated labels removed from task/class infrastructure;
+research provenance retained. The final report is unchanged byte-for-byte.
