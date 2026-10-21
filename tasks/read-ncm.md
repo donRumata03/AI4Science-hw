@@ -1,6 +1,6 @@
 ---
 type: Task
-status: in_progress
+status: done
 ---
 # Summarize and verify NCM
 
@@ -23,6 +23,10 @@ Extraction pipeline -> summary -> claim audit; stop when all fixed criteria pass
 ## Boundaries
 
 Training, benchmark reproduction or claims of experimental improvement.
+
+## Result
+
+Completed bounded research artifact: [report](../reports/paper-review.md). No user acceptance is inferred.
 
 ## Links
 - type: [[ontology/Task]]

@@ -1,0 +1,77 @@
+{
+  "policy": "deterministic fixture; no live model",
+  "source_count": 3,
+  "cases": {
+    "complete_observation": {
+      "accepted": true,
+      "reason": "verified",
+      "source_unchanged": true,
+      "trace": [
+        {
+          "event": "read",
+          "observed_documents": 3
+        },
+        {
+          "event": "write",
+          "path": "result.txt",
+          "value": "3"
+        },
+        {
+          "event": "external_verifier",
+          "expected": 3,
+          "accepted": true
+        }
+      ]
+    },
+    "silent_truncation": {
+      "accepted": false,
+      "reason": "wrong_result",
+      "source_unchanged": true,
+      "trace": [
+        {
+          "event": "read",
+          "observed_documents": 2
+        },
+        {
+          "event": "write",
+          "path": "result.txt",
+          "value": "2"
+        },
+        {
+          "event": "external_verifier",
+          "expected": 3,
+          "accepted": false
+        }
+      ]
+    },
+    "protected_source_write": {
+      "accepted": false,
+      "reason": "protected_write",
+      "source_unchanged": true,
+      "trace": [
+        {
+          "event": "read",
+          "observed_documents": 3
+        },
+        {
+          "event": "write_blocked",
+          "path": "catalog.json"
+        }
+      ]
+    },
+    "repeated_action": {
+      "accepted": false,
+      "reason": "repeat_stopped",
+      "source_unchanged": true,
+      "trace": [
+        {
+          "event": "observation",
+          "value": "still running"
+        },
+        {
+          "event": "repeat_stopped"
+        }
+      ]
+    }
+  }
+}

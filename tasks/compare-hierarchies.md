@@ -1,6 +1,6 @@
 ---
 type: Task
-status: in_progress
+status: done
 ---
 # Review three hierarchy constructions
 
@@ -23,6 +23,10 @@ Plan and execute; stop after three supported cards and one concise comparison.
 ## Boundaries
 
 A cross-paper quality ranking under unmatched evaluation protocols.
+
+## Result
+
+Completed bounded research artifact: [report](../reports/hierarchy-comparison.md). No user acceptance is inferred.
 
 ## Links
 - type: [[ontology/Task]]

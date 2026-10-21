@@ -1,0 +1,14 @@
+{
+  "paper_id": "2610.14162",
+  "version": "v1",
+  "reviewed_on": "2026-10-21",
+  "review_method": "Assistant checked PDF text and rendered source pages; no independent human review is claimed.",
+  "checks": [
+    {"claim_id": "C2", "pdf_page": 6, "locator": "Section 3.2, Equation 5", "anchors": ["sampled independently", "(5)"], "judgment": "verified", "scope": "Factorization of the model conditional, not proof of independence in real data."},
+    {"claim_id": "C3", "pdf_page": 6, "locator": "Section 3.3, Equations 7-8", "anchors": ["nearest entry", "(8)"], "judgment": "verified", "scope": "Residual quantization and cumulative reconstruction; does not establish semantic disentanglement."},
+    {"claim_id": "C4", "pdf_page": 7, "locator": "Nested dropout, Equation 9", "anchors": ["Nested dropout.", "sampled cutoff"], "judgment": "verified", "scope": "Encourages informative prefixes; no guarantee that their distribution is easy to generate."},
+    {"claim_id": "C5", "pdf_page": 7, "locator": "Section 3.4, Algorithms 1-2", "anchors": ["tokenizer frozen", "Algorithm 2"], "judgment": "verified", "scope": "One training pass over levels differs from sequential generation over levels."},
+    {"claim_id": "C7", "pdf_page": 8, "locator": "Section 4.1, Table 1", "anchors": ["99.86", "99.99"], "judgment": "verified", "scope": "Published held-out token reconstruction: LM1B 99.86%, OWT 99.99%; not our reproduction."},
+    {"claim_id": "C8", "pdf_page": 9, "locator": "Section 4.2, Figure 5 and evaluation paragraph", "anchors": ["GPT-2-large", "unigram entropy"], "judgment": "verified", "scope": "Mean per-sample unigram entropy accompanies GenPPL; it is not corpus n-gram diversity or MAUVE."}
+  ]
+}

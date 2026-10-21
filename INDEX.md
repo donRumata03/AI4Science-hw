@@ -15,6 +15,9 @@
 | [library/README.md](library/README.md) | Reading order and source handling |
 | [library/catalog.json](library/catalog.json) | Pinned PDF metadata and hashes |
 | [memory/README.md](memory/README.md) | NCM L1/L2/L3 and evidence navigation |
+| [memory/verification.json](memory/verification.json) | Six machine-locatable source checks |
+| [reports/hierarchy-comparison.md](reports/hierarchy-comparison.md) | Bounded comparison of NCM, HDLM and H-CDLM |
+| [reports/agent-loop.md](reports/agent-loop.md) | Offline driver exercise and its limits |
 | [ontology.yaml](ontology.yaml) | Initial graph schema; week 4 remains pending |
 | [ontology/](ontology/) | Class notes |
 | [notes/](notes/) | Methods, hypotheses, metrics and source cards |

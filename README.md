@@ -23,6 +23,8 @@ implementations of the proposed NCM experiment.
 Set-Location C:\dev\Education\AI4Science
 python -m pip install -r checks/requirements.txt
 python checks/check_structure.py
+python checks/check_evidence.py
+python checks/agent_loop_demo.py
 ```
 
 Existing external experiments are documented only by pointers in
@@ -31,3 +33,7 @@ Existing external experiments are documented only by pointers in
 Course evidence is a secondary view of the same research outputs:
 [course requirements](docs/course.md) and [weeks 1-3 report](reports/weeks-1-3.md).
 Weeks 4-5 remain future work. No remote repository is configured.
+
+Completed current outputs: [NCM memory](memory/README.md),
+[three-method comparison](reports/hierarchy-comparison.md), and
+[source-review outcome](reports/paper-review.md).

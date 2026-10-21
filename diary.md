@@ -30,3 +30,20 @@ notes. Key proposals and their attribution were distilled into research-context.
 language instruction; the initial commit preserves the original wording. Future
 entries remain append-only. Model implementation here has not started. Existing
 external experiments are acknowledged as separate historical work.
+
+## 2026-10-21 - source review, memory and weeks 1-3 evidence
+
+[source] Read the NCM main paper (PDF pp.2-13) with focused evidence review on pp.6-9;
+read HDLM hierarchy/transition/training pages and H-CDLM method/evaluation pages.
+Six method/evaluation pages were rendered for direct inspection. Three original PDFs
+retain their catalog hashes. NCM L1 covers main sections, L2 has eight claims, L3 is
+one sentence, and six claims have source-page judgments and machine-locatable anchors.
+[generated] Distinguish model factorization from real-data independence; qualify
+Table 1 reconstruction by dataset; do not equate unigram entropy with corpus diversity.
+These corrections refine the research premises without asserting an experimental gain.
+[source] Structure and evidence checks returned 0. On an isolated copy, directing C7
+to a wrong source page returned 1. Four offline driver scenarios passed expected
+accept/reject/protection/repeat checks; the policy was explicitly a deterministic fixture.
+[generated] Confirmed week-1 summary scope and week-2/3 artifact criteria are recorded;
+the absent week-1 presentation and unexecuted live notebook exercises remain disclosed.
+Paper-review tasks are done, not user-accepted. Next: research design and targeted search.

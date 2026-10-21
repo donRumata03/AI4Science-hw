@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-21",
+  "python": "3.12.3",
+  "pypdf": "5.9.0",
+  "checks": [
+    {
+      "command": "python checks/check_structure.py",
+      "exit_code": 0,
+      "stdout": "PASS: required files, 107 local links, pinned PDF digests.\nScope: structure only; article claims, graph rules and homework remain ungraded.",
+      "stderr": ""
+    },
+    {
+      "command": "python checks/check_evidence.py",
+      "exit_code": 0,
+      "stdout": "PASS: 8 L2 claims; 6 reviewed evidence locations; L1/L3; English policy.\nScope: evidence location/integrity and document shape; no semantic proof or human acceptance.",
+      "stderr": ""
+    },
+    {
+      "command": "python checks/agent_loop_demo.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"policy\": \"deterministic fixture; no live model\",\n  \"source_count\": 3,\n  \"cases\": {\n    \"complete_observation\": {\n      \"accepted\": true,\n      \"reason\": \"verified\",\n      \"source_unchanged\": true,\n      \"trace\": [\n        {\n          \"event\": \"read\",\n          \"observed_documents\": 3\n        },\n        {\n          \"event\": \"write\",\n          \"path\": \"result.txt\",\n          \"value\": \"3\"\n        },\n        {\n          \"event\": \"external_verifier\",\n          \"expected\": 3,\n          \"accepted\": true\n        }\n      ]\n    },\n    \"silent_truncation\": {\n      \"accepted\": false,\n      \"reason\": \"wrong_result\",\n      \"source_unchanged\": true,\n      \"trace\": [\n        {\n          \"event\": \"read\",\n          \"observed_documents\": 2\n        },\n        {\n          \"event\": \"write\",\n          \"path\": \"result.txt\",\n          \"value\": \"2\"\n        },\n        {\n          \"event\": \"external_verifier\",\n          \"expected\": 3,\n          \"accepted\": false\n        }\n      ]\n    },\n    \"protected_source_write\": {\n      \"accepted\": false,\n      \"reason\": \"protected_write\",\n      \"source_unchanged\": true,\n      \"trace\": [\n        {\n          \"event\": \"read\",\n          \"observed_documents\": 3\n        },\n        {\n          \"event\": \"write_blocked\",\n          \"path\": \"catalog.json\"\n        }\n      ]\n    },\n    \"repeated_action\": {\n      \"accepted\": false,\n      \"reason\": \"repeat_stopped\",\n      \"source_unchanged\": true,\n      \"trace\": [\n        {\n          \"event\": \"observation\",\n          \"value\": \"still running\"\n        },\n        {\n          \"event\": \"repeat_stopped\"\n        }\n      ]\n    }\n  }\n}",
+      "stderr": ""
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "C7 assigned to PDF page 9 instead of page 8",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "result": "rejected missing source anchors on an isolated copy"
+    }
+  ],
+  "semantic_review": "Six claims reviewed against original PDF text and rendered pages; location checks are not semantic proof.",
+  "limitations": [
+    "Week 1 slides unavailable: only the confirmed summary criterion is assessed.",
+    "Original notebook live-inference exercises were not run; offline policy is a deterministic fixture.",
+    "No model implementation or training has started in this repository.",
+    "Weeks 4-5 remain pending."
+  ]
+}
