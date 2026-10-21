@@ -47,3 +47,9 @@ accept/reject/protection/repeat checks; the policy was explicitly a deterministi
 [generated] Confirmed week-1 summary scope and week-2/3 artifact criteria are recorded;
 the absent week-1 presentation and unexecuted live notebook exercises remain disclosed.
 Paper-review tasks are done, not user-accepted. Next: research design and targeted search.
+
+## 2026-10-21 - graph development block
+
+[generated] Extended the class hierarchy and competency questions; added a reusable
+closed-world graph verifier. Done tasks require report evidence; human acceptance
+is not inferred. The next block adds actual retrieval and external graph provenance.

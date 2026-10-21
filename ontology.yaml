@@ -1,33 +1,143 @@
-# Initial English schema. Week 4 acceptance is not asserted.
-version: 2
+version: 3
 classes:
-  Method: {definition: Representation or generation procedure}
-  Source: {definition: Identifiable primary reference}
-  Hypothesis: {definition: Falsifiable research proposition}
-  Metric: {definition: Explicitly defined measurement}
-  Task: {definition: Request with acceptance and status}
-  Report: {definition: Work and verification record}
-  File: {definition: Physical repository file}
-  GraphQuery: {definition: Executed external query with provenance}
+  Method:
+    definition: Representation or generation procedure
+    parent: Entity
+  Source:
+    definition: Identifiable primary reference
+    parent: Entity
+  Hypothesis:
+    definition: Falsifiable research proposition
+    parent: Entity
+  Metric:
+    definition: Explicitly defined measurement
+    parent: Entity
+  Task:
+    definition: Request with acceptance and status
+    parent: Entity
+  Report:
+    definition: Work and verification record
+    parent: Entity
+  File:
+    definition: Physical repository file
+    parent: Entity
+  GraphQuery:
+    definition: Executed external query with provenance
+    parent: Entity
+  Entity:
+    definition: Named research object; root of the local class hierarchy
+  Concept:
+    definition: Research concept connected to external knowledge graphs
+    parent: Entity
+  Author:
+    definition: A person credited on a primary reference
+    parent: Entity
 relations:
-  type: {domain: [Method, Source, Hypothesis, Metric, Task, Report, GraphQuery], range_kind: class}
-  describes: {domain: [Source], range: [Method]}
-  basedOn: {domain: [Method, Hypothesis], range: [Source]}
-  comparedWith: {domain: [Method], range: [Method]}
-  testedBy: {domain: [Hypothesis], range: [Method]}
-  evaluatedWith: {domain: [Method], range: [Metric]}
-  storedIn: {domain: [Source, Report], range: [File]}
-  subtaskOf: {domain: [Task], range: [Task]}
-  completes: {domain: [Report], range: [Task]}
-  foundBy: {domain: [Source], range: [GraphQuery]}
+  type:
+    domain:
+    - Method
+    - Source
+    - Hypothesis
+    - Metric
+    - Task
+    - Report
+    - GraphQuery
+    range_kind: class
+  describes:
+    domain:
+    - Source
+    range:
+    - Method
+  basedOn:
+    domain:
+    - Method
+    - Hypothesis
+    range:
+    - Source
+  comparedWith:
+    domain:
+    - Method
+    range:
+    - Method
+  testedBy:
+    domain:
+    - Hypothesis
+    range:
+    - Method
+  evaluatedWith:
+    domain:
+    - Method
+    range:
+    - Metric
+  storedIn:
+    domain:
+    - Source
+    - Report
+    - GraphQuery
+    range:
+    - File
+  subtaskOf:
+    domain:
+    - Task
+    range:
+    - Task
+  completes:
+    domain:
+    - Report
+    range:
+    - Task
+  foundBy:
+    domain:
+    - Source
+    range:
+    - GraphQuery
+  about:
+    domain:
+    - GraphQuery
+    range:
+    - Concept
+  researchField:
+    domain:
+    - Method
+    range:
+    - Concept
+  writtenBy:
+    domain:
+    - Source
+    range:
+    - Author
 attributes:
-  status: {domain: [Task], values: [open, in_progress, done, accepted, blocked]}
-  source_url: {domain: [Source, GraphQuery], datatype: string}
-  accessed: {domain: [Source, GraphQuery], datatype: date}
+  status:
+    domain:
+    - Task
+    values:
+    - open
+    - in_progress
+    - done
+    - accepted
+    - blocked
+  source_url:
+    domain:
+    - Source
+    - GraphQuery
+    datatype: string
+  accessed:
+    domain:
+    - Source
+    - GraphQuery
+    datatype: date
 rules:
-  - id: R1
-    statement: Every source has a source URL and access date; local PDFs have a storedIn link.
-  - id: R2
-    statement: A done task has a report or completed subtasks; accepted requires explicit user acceptance.
-  - id: R3
-    statement: Typed relation endpoints agree with their declared domain and range.
+- id: R1
+  statement: Every source has a source URL and access date; local PDFs have a storedIn
+    link.
+- id: R2
+  statement: A done task has a report or completed subtasks; accepted requires explicit
+    user acceptance.
+- id: R3
+  statement: Typed relation endpoints agree with their declared domain and range.
+competency_questions:
+- Which assumption motivates within-level denoising?
+- Which primary paper supports each compared method?
+- Which measurements are needed for a fair experiment?
+- Which tasks have verified outcomes but no human acceptance?
+- Which external graph statement is linked to our research?
