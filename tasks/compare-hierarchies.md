@@ -1,22 +1,29 @@
 ---
-type: Задача
-status: открыта
+type: Task
+status: in_progress
 ---
-# Сопоставить три иерархии
+# Review three hierarchy constructions
 
-## Запрос пользователя
+## Outcome
 
-[написано] Добавить arXiv:2510.08632 и arXiv:2610.08738 в статьи для разбора.
+[generated] Review NCM, HDLM and H-CDLM and assess relevance to the primary experiment.
 
-## Готово, когда
+## Acceptance criteria
 
-[порождено] Сравнение NCM, HDLM и H-CDLM опирается на страницы PDF;
-видно, что означают иерархия, порядок генерации и условие в каждом методе.
+Three PDF-grounded cards and a comparison of representation, diffusion state, order and transfer limits.
 
-## Не входит
+## Verifier
 
-Вывод о превосходстве модели по несопоставимым опубликованным метрикам.
+PDF hashes, page references and direct method-section review.
 
-## Связи
-- тип: [[ontology/Задача]]
-- подзадачаОт: [[tasks/hw1]]
+## Mode and stop
+
+Plan and execute; stop after three supported cards and one concise comparison.
+
+## Boundaries
+
+A cross-paper quality ranking under unmatched evaluation protocols.
+
+## Links
+- type: [[ontology/Task]]
+- subtaskOf: [[tasks/research]]

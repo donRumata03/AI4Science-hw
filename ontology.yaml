@@ -1,46 +1,33 @@
-# [порождено] Начальная схема. Правила ниже требуют содержательной проверки.
-# check_structure.py проверяет ссылки, но не исполняет эту онтологию.
-version: 1
-competency_questions:
-  - Что представляет иерархия каждого сравниваемого метода?
-  - Какие источники описывают метод и какой PDF проверяется?
-  - Какой метод проверяет гипотезу о зависимостях внутри уровня?
-  - Какие метрики нужны для проверки качества и разнообразия?
-  - Какие задачи выполнены и каким отчётом закрыты?
+# Initial English schema. Week 4 acceptance is not asserted.
+version: 2
 classes:
-  Метод: {definition: Способ построения представлений или генерации}
-  Источник: {definition: Идентифицируемая научная работа или иной первоисточник}
-  Гипотеза: {definition: Проверяемое предположение об исследуемом явлении}
-  Метрика: {definition: Именованный показатель с явно фиксируемым протоколом}
-  Задача: {definition: Запрос с условием готовности и статусом}
-  Отчёт: {definition: Запись выполненной работы и проверки}
-  Файл: {definition: Физический файл по пути от корня репозитория}
-  ЗапросКГрафу: {definition: Выполненный запрос к внешнему графу с происхождением}
+  Method: {definition: Representation or generation procedure}
+  Source: {definition: Identifiable primary reference}
+  Hypothesis: {definition: Falsifiable research proposition}
+  Metric: {definition: Explicitly defined measurement}
+  Task: {definition: Request with acceptance and status}
+  Report: {definition: Work and verification record}
+  File: {definition: Physical repository file}
+  GraphQuery: {definition: Executed external query with provenance}
 relations:
-  тип: {domain: [Метод, Источник, Гипотеза, Метрика, Задача, Отчёт, ЗапросКГрафу], range_kind: class}
-  описывает: {domain: [Источник], range: [Метод]}
-  основанаНа: {domain: [Метод, Гипотеза], range: [Источник]}
-  сравниваетсяС: {domain: [Метод], range: [Метод]}
-  проверяетсяМетодом: {domain: [Гипотеза], range: [Метод]}
-  оцениваетсяЧерез: {domain: [Метод], range: [Метрика]}
-  хранитсяВ: {domain: [Источник, Отчёт], range: [Файл]}
-  подзадачаОт: {domain: [Задача], range: [Задача]}
-  выполняет: {domain: [Отчёт], range: [Задача]}
-  найденЗапросом: {domain: [Источник], range: [ЗапросКГрафу]}
+  type: {domain: [Method, Source, Hypothesis, Metric, Task, Report, GraphQuery], range_kind: class}
+  describes: {domain: [Source], range: [Method]}
+  basedOn: {domain: [Method, Hypothesis], range: [Source]}
+  comparedWith: {domain: [Method], range: [Method]}
+  testedBy: {domain: [Hypothesis], range: [Method]}
+  evaluatedWith: {domain: [Method], range: [Metric]}
+  storedIn: {domain: [Source, Report], range: [File]}
+  subtaskOf: {domain: [Task], range: [Task]}
+  completes: {domain: [Report], range: [Task]}
+  foundBy: {domain: [Source], range: [GraphQuery]}
 attributes:
-  status:
-    domain: [Задача]
-    values: [открыта, в работе, выполнена, принята, заблокирована]
-  arxiv_id: {domain: [Источник], datatype: string}
-  source_url: {domain: [Источник, ЗапросКГрафу], datatype: string}
-  accessed: {domain: [Источник, ЗапросКГрафу], datatype: date}
+  status: {domain: [Task], values: [open, in_progress, done, accepted, blocked]}
+  source_url: {domain: [Source, GraphQuery], datatype: string}
+  accessed: {domain: [Source, GraphQuery], datatype: date}
 rules:
   - id: R1
-    statement: У каждого Источника есть source_url и accessed; локальный PDF связан отношением хранитсяВ.
-    check: Сверить идентификатор и заголовок с первоисточником, путь и SHA-256 с library/catalog.json.
+    statement: Every source has a source URL and access date; local PDFs have a storedIn link.
   - id: R2
-    statement: Выполненную задачу закрывает Отчёт или все записанные подзадачи; принятая имеет явную приёмку пользователя.
-    check: Проверить готовность, входящие выполняет и статусы подзадач; не подменять приёмку выполнением.
+    statement: A done task has a report or completed subtasks; accepted requires explicit user acceptance.
   - id: R3
-    statement: Концы каждого типизированного отношения принадлежат domain и range схемы.
-    check: Проверить type заметок; для хранитсяВ проверить существующий файл, для тип — заметку класса.
+    statement: Typed relation endpoints agree with their declared domain and range.

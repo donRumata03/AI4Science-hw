@@ -1,14 +1,9 @@
 ---
-type: Метрика
+type: Metric
 ---
 # MAUVE
 
-[написано] Пользователь указал метрику как один из приоритетов оценки NCM
-в связанном диалоге; там название уточнено с «MOV» до MAUVE.
+[generated] A requested quality/distribution diagnostic. Pin reference corpus, sample count, lengths, feature encoder, clustering and seeds before computing it. Not computed here.
 
-[порождено] Для будущей оценки зафиксировать reference corpus, число и длину
-текстов, preprocessing, feature model, clustering и seeds. В этом репозитории
-метрика не вычислялась; первоисточник MAUVE ещё нужно добавить в библиотеку.
-
-## Связи
-- тип: [[ontology/Метрика]]
+## Links
+- type: [[ontology/Metric]]

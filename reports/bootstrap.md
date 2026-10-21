@@ -1,36 +1,17 @@
 ---
-type: Отчёт
+type: Report
 ---
-# Создание стартовой среды
+# Initial environment record
 
-[порождено] Создан отдельный локальный репозиторий ДЗ1 на теме NCM.
-Подготовлены короткий договор, состояние и журнал, карта требований, начальная
-онтология и граф, шаблоны памяти и отчётов. Загружены три исходных PDF с arXiv.
+[source] The initial repository was created on 2026-10-21 at commit 916240b.
+It contained three downloaded PDFs, a schema, task notes, memory/report templates and
+a structural verifier. The verifier checked 87 local links and PDF hashes. On a copy,
+a broken local target and a modified PDF were both rejected. No model was trained.
 
-## Проверка
+[generated] This record preserves the historical outcome in English. The current
+research-first contract supersedes the initial homework-first framing. The original
+Russian prose remains recoverable in git history; subsequent diary updates are append-only.
 
-Команда: `python checks/check_structure.py` из корня репозитория.
-2026-10-21, системный Python 3.12: код 0; проверены обязательные файлы,
-87 локальных ссылок и SHA-256 трёх PDF. Проверка использует только стандартную библиотеку.
-
-На отдельной копии добавлена ссылка на отсутствующий файл, затем изменён байт PDF:
-обе ошибки дали код 1 и ожидаемое сообщение. Оригиналы не менялись.
-
-Дополнительный разовый осмотр с PyYAML 6.0.2 из существующего внешнего окружения:
-8 классов, 16 типизированных объектов, ссылки на классы, domain/range отношений,
-source_url/accessed и связи с PDF согласованы. Это не поставляемый валидатор
-онтологии и не замена отсутствующему `check_week4.py`.
-
-При создании среды в первом прогоне служебный скрипт ошибочно воспринял
-пример wiki-ссылки внутри inline-кода как реальную ссылку. Обработка примеров
-исправлена; финальная проверка и отрицательные контроли выполнены после исправления.
-
-## Ограничение результата
-
-Выполнен старт среды. Полный разбор PDF, три сверенных тезиса, две сессии работы
-с графом, библиотека ≥20 документов, BM25/векторный поиск и SPARQL остаются впереди.
-Здесь не воспроизводились численные результаты из `text-diffusion`.
-
-## Связи
-- тип: [[ontology/Отчёт]]
-- выполняет: [[tasks/bootstrap]]
+## Links
+- type: [[ontology/Report]]
+- completes: [[tasks/bootstrap]]

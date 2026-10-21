@@ -1,22 +1,29 @@
 ---
-type: Задача
-status: открыта
+type: Task
+status: open
 ---
-# Подготовить поиск и внешний граф
+# Search and screen additional literature
 
-## Запрос пользователя
+## Outcome
 
-[порождено] Подзадача, следующая из требований ДЗ1 недели 5.
+[generated] Build evidence for unresolved research questions; retain search provenance.
 
-## Готово, когда
+## Acceptance criteria
 
-≥20 доступных документов, пять запросов с выдачами BM25 и векторного поиска,
-разбор качества, выполненный SPARQL, результат с происхождением связан с графом.
+Stable IDs, access state, relevance and no fabricated full-text reviews; future retrieval study: >=20 documents and >=5 queries.
 
-## Не входит
+## Verifier
 
-Разработка новой поисковой модели с нуля.
+Primary-record checks, duplicate-ID check and saved query/output review.
 
-## Связи
-- тип: [[ontology/Задача]]
-- подзадачаОт: [[tasks/hw1]]
+## Mode and stop
+
+Search-screen-record pipeline; at most five new candidates per question per block.
+
+## Boundaries
+
+New retrieval-model development or an unexecuted SPARQL result presented as real.
+
+## Links
+- type: [[ontology/Task]]
+- subtaskOf: [[tasks/research]]

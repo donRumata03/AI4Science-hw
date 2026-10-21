@@ -1,42 +1,32 @@
-# Журнал проекта
+# Research diary
 
-## 2026-10-21 — исходная постановка и источники требований
+## 2026-10-21 - initial environment (translated historical entry)
 
-[написано] Пользователь просит создать `C:/dev/Education/AI4Science`, вести короткий
-`AGENTS.md`, дописывать `diary.md`, перезаписывать `STATUS.md`, объяснять в коммитах
-причину изменения. ReAct как обязательный режим не нужен.
+[written] The user requested a separate repository, concise AGENTS.md, append-only
+diary.md, rewritten STATUS.md and commits explaining why. Forced ReAct was unwanted.
+[source] Original context: chat 6ad55e65-b228-83eb-982c-13f434b90801; NCM context:
+chat 6ad62397-44dc-83eb-9770-39f494b040c6. Two additional papers were requested.
+[generated] A separate environment was created without moving private code. W2-W5
+slides were read; W3 p.71, W4 p.84 and W5 pp.87-88 were visually checked. W1 slides
+were absent from both the local directory and ZIP.
 
-[источник] Диалог AI4Science: `6ad55e65-b228-83eb-982c-13f434b90801`.
-Контекст NCM: `6ad62397-44dc-83eb-9770-39f494b040c6`, прочитан 2026-10-21.
-Тема уточнена как conditional diffusion дискретных кодов внутри уровня NCM.
-Пользователь дополнительно указал arXiv:2510.08632 и arXiv:2610.08738.
+## 2026-10-21 - bootstrap verification (translated historical entry)
 
-[источник] Прочитаны локальные слайды недель 2–5. Визуально проверены страницы:
-неделя 3 — 71; неделя 4 — 84; неделя 5 — 87–88.
-Слайды недели 1 отсутствуют и в локальной папке, и в исходном ZIP.
+[source] Initial structure check: exit 0, 87 links and three PDF hashes. PDF lengths:
+NCM 40 pages, HDLM 29 pages, H-CDLM 27 pages. A false positive on an inline-code
+wiki-link example was fixed. Missing-target and altered-PDF controls failed as expected.
+A one-off PyYAML review found 8 classes and 16 typed objects with consistent links.
+[generated] Bootstrap was marked done, without inventing user acceptance. The full
+homework was not declared complete. External NCM working trees were not modified.
 
-[порождено] Решение: отдельный учебный репозиторий с указателями на существующую
-рабочую папку, без копирования закрытого кода и экспериментальных результатов.
-Начальный граф описывает реальные методы, источники, метрики и задачи;
-число узлов не заменяет содержательную проверку.
+## 2026-10-21 - research-first scope and language migration
 
-## 2026-10-21 — стартовая среда подготовлена и проверена
-
-[источник] `python checks/check_structure.py`: код 0; обязательные файлы,
-87 локальных ссылок, заголовки PDF и контрольные суммы прошли проверку.
-Три PDF дополнительно открыты через pypdf: NCM — 40 страниц, HDLM — 29,
-H-CDLM — 27; заголовки сопоставлены с официальными метаданными arXiv.
-
-[порождено] В первом прогоне пример wiki-ссылки внутри inline-кода вызвал
-ложную ошибку. Скрипт исправлен: примеры кода исключены из проверки ссылок.
-На отдельной копии проверены два отрицательных контроля — отсутствующая цель
-ссылки и изменение байта PDF; оба отклонены с кодом 1.
-
-[источник] Разовый осмотр YAML/графа с PyYAML 6.0.2: 8 классов,
-16 типизированных объектов; ссылки на классы, domain/range и происхождение
-источников согласованы. Глобальная онтологическая и научная корректность
-этой проверкой не устанавливается. Учебный `check_week4.py` отсутствует.
-
-[порождено] Задача старта помечена «выполнена»; пользовательская приёмка
-не подставлялась. Готовность всего ДЗ не объявляется. Следующий блок —
-разбор NCM и три сверки L2 с PDF. Изменения исходных NCM-checkout не трогались.
+[written] The user clarified that the project must conduct research, with acceptance,
+verifiers and work modes for paper review, summarization and literature search.
+All maintained project files must be English, regardless of chat language.
+[source] Both requested chats and Notion page N1 were read. N1 is unverified source
+notes. Key proposals and their attribution were distilled into research-context.md.
+[generated] The working-tree diary was translated once to satisfy the explicit
+language instruction; the initial commit preserves the original wording. Future
+entries remain append-only. Model implementation here has not started. Existing
+external experiments are acknowledged as separate historical work.

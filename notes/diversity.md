@@ -1,13 +1,9 @@
 ---
-type: Метрика
+type: Metric
 ---
 # Diversity
 
-[написано] Пользователь указал diversity среди приоритетных метрик NCM.
+[generated] A requested family of measurements. Pin tokenization, n-gram definition and aggregation before reporting any value. Not computed here.
 
-[порождено] Название пока обозначает семейство показателей. При разборе
-evaluation-кода зафиксировать формулу, токенизацию, порядок n-грамм и агрегацию.
-Не подменять это одним числом без определения. Здесь метрика не вычислялась.
-
-## Связи
-- тип: [[ontology/Метрика]]
+## Links
+- type: [[ontology/Metric]]

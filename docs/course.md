@@ -1,176 +1,58 @@
-# ДЗ1: требования курса и порядок работы
+# Course evidence mapping
 
-[источник] Локальные материалы курса:
-`C:\Users\Vova\YandexDisk\МоиКниги\Учебники\AI4Science`.
-В этом документе страницы — номера слайдов/PDF, начиная с 1.
-Требования ниже отделены от предлагаемых способов выполнить их на теме NCM.
+[source] Source IDs and local slide paths are in `source-register.json`. Page numbers
+are one-based PDF pages. This file maps actual research artifacts to course criteria;
+the repository's scientific objective remains hierarchical text generation research.
 
-## Общая формулировка
+## Week 1: environment and generation-verification cycle
 
-[источник] Неделя 5, `slides.pdf`, стр. 88: ДЗ1 «Среда и контекст», 20 баллов,
-недели 1–5, сдача к неделе 6. Сдаются отчёт, файл инструкций своего проекта и
-примеры запросов к локальному контексту. Каждый пункт должен проверяться по
-пакету: команда, файл, метка в git. Фрагменты отчёта помечаются `[порождено]`,
-`[написано]`, `[источник]`. Поздняя сдача получает множитель 0,5.
+The week 1 presentation is unavailable in the supplied directory and ZIP. The summary
+on W3 p.74 and W5 p.88 establishes an environment in git and a generation-verification
+cycle. No complete week-1-specific rubric can be asserted from the missing slides.
+Evidence: a pinned source catalog, a generated research artifact, verification output,
+a diary entry and a git commit. A structural pass is not scientific validation.
 
-На стр. 88 используется имя `AGENT.md`; на неделе 3 — `AGENTS.md`.
-В рабочем репозитории оставлено одно каноническое имя `AGENTS.md`.
-Если форма сдачи требует буквально `AGENT.md`, при сборке пакета нужно экспортировать
-копию актуального файла, не вести два независимо редактируемых набора правил.
+## Week 2: agent task contract
 
-Календарная дата сдачи из формулировки «к неделе 6» не следует: нужна дата из LMS.
+W2 pp.41-43 defines: goal, acceptance/verifier, budget, work/access mode and initial
+context; a pre-run snapshot, external check, journal and commit. W3 p.74 identifies
+AGENTS.md with acceptance and marked restrictions as the artifact for this part.
+Evidence: AGENTS.md, research task contracts, a source-grounded paper-review request
+and a recorded verification outcome. ReAct is an example, not our mandatory mode.
 
-| Неделя | Подтверждённая часть ДЗ1 | Состояние здесь |
-|---|---|---|
-| 1 | Среда в git и цикл «порождение — проверка» | Стартовая среда; исходные слайды отсутствуют |
-| 2 | Описанный цикл агента своего проекта | Короткий договор и описание ниже |
-| 3 | Сжатие статьи, инструкции, файл-указатель | Шаблоны; статья ещё не разобрана |
-| 4 | Онтология и граф | Начальная схема и реальные объекты; нужна содержательная проверка и две сессии |
-| 5 | Поиск по библиотеке и запрос к внешнему графу | Три стартовые статьи; поиск ещё не выполнялся |
+## Week 3: context, memory and navigation
 
-## Неделя 1: среда и проверяемый шаг
+W3 p.71 explicitly requires L1 -> L2 -> L3, at least three claims checked against the
+original, AGENTS.md with at least five sections including what the agent cannot infer,
+a file index and git. W3 p.70 specifies section-level L1, 5-10 L2 claims, one-line L3,
+page references, and practice with the Agent in Code notebook.
+Evidence: memory/L1.md, L2.md, L3.md, verification.md and verification.json, AGENTS.md,
+INDEX.md and commit history. Our optional offline driver demonstration does not claim
+to execute the notebook's live model-policy comparisons.
 
-[источник] Слайдов недели 1 нет в доступной папке и исходном ZIP. Есть
-`week_1/project_template/` с `src/`, `data/`, `paper/`, `memory/` и `.gitignore`,
-а также пример Бойля–Мариотта. Связь недели 1 с итоговым ДЗ подтверждается
-перечнем на неделе 5, стр. 88. Более подробные обязательные пункты не восстановлены.
+## Week 4: future work
 
-[порождено] Для нашего старта:
+W4 p.84: at least three classes, two rules and ten typed objects; distinguish classes
+from instances; relations consistent with the schema; git. Expected locations include
+ontology.yaml, ontology/, notes/, .obsidian/, tasks/, a graph section in AGENTS.md,
+and commits from two sessions. W4 p.83 includes task/result acceptance in the session.
+The current graph is only a scaffold. Two user acceptance sessions are not fabricated.
+The course's check_week4.py is unavailable.
 
-1. Создать отдельный git-репозиторий и указать границу между учебной средой и кодом NCM.
-2. Попросить агента создать конкретный небольшой артефакт, например карту проекта.
-3. Проверить существование файлов, переходы по ссылкам и целостность PDF внешней командой.
-4. Записать запрос, итог проверки и ограничение проверки в журнал, сделать коммит.
+## Week 5: future work
 
-Смысл: текст агента должен оставлять на диске результат, который можно проверить
-и восстановить. Запуск служебной проверки не доказывает научную корректность проекта.
-Результат обучения NCM для этого шага не нужен.
+W5 p.87: at least 20 topic documents, five own queries, BM25 and vector retrieval
+outputs with analysis, a working SPARQL query, and the external query result linked
+into the local graph with provenance. Expected artifacts include a search report,
+source/author/query notes, literature rules and a commit. W5 p.86 asks for three
+primary-source metadata spot-checks. Three seed PDFs do not satisfy this requirement.
 
-## Неделя 2: агент как функциональная система
+## Submission
 
-[источник] `week_2/slides_2.pdf`, стр. 7–8, 16, 20, 41–43.
-Курс различает модель, ведущее приложение, инструменты, инструкции, цель и проверку.
-До запуска фиксируются результат и критерий, бюджет, режим и контекст; после —
-внешняя проверка, журнал и git. Текстовый запрет не равен техническому ограничению.
-
-[порождено] Соответствие нашей среде:
-
-| Компонент | В этом проекте |
-|---|---|
-| Модель | Выбранная пользователем модель текущей сессии; название для отчёта фиксируется из интерфейса |
-| Ведущее приложение | Codex desktop; исполняет инструменты и поддерживает рабочую сессию |
-| Инструменты | Чтение/запись файлов, shell, git, PDF и поиск |
-| Инструкции | `AGENTS.md` и конкретный запрос текущего блока |
-| Цель | Проверяемый артефакт контекста для исследования NCM |
-| Верификатор | Скрипт структуры для файлов; сверка с первоисточником для утверждений; анализ результатов для эксперимента |
-
-Практический цикл: прочитать состояние → сформулировать артефакт → выполнить
-ограниченный блок → проверить результат → обновить память → закоммитить причину.
-Выбор режима зависит от задачи. Обязательный ReAct и фиксированное число вызовов
-не нужны; шаблон курса адаптирован к одному содержательному результату за блок.
-
-В `AGENTS.md` явно указано, что автоматического фильтра вызовов нет. Изоляция
-отдельной папкой уменьшает риск случайного включения закрытого проекта, но не
-создаёт sandbox: инструменты текущей сессии могут иметь доступ за её пределами.
-
-## Неделя 3: контекст, сжатие и память
-
-[источник] `week_3/slides.pdf`, стр. 50, 54, 61–64, 69–71.
-Материал объясняет ограниченность окна и цену лишнего контекста. Подробности
-остаются в файлах; агент получает указатели и нужные выдержки. Сжатие может
-исказить смысл, поэтому тезисы проверяются по оригиналу.
-
-Минимум артефакта, стр. 71:
-
-- L1 → L2 → L3: реферат по разделам, 5–10 тезисов, одна строка;
-- не менее трёх утверждений сверены с оригиналом, со страницами;
-- в `AGENTS.md` не менее пяти разделов и есть «чего агент не может знать сам»;
-- `INDEX.md` и материалы в git.
-
-Самостоятельная практика, стр. 70: ноутбук «Агент в коде», собственная задача
-с критерием, сжатие статьи, полный договор и файл-указатель; ориентир 3–5 часов.
-
-[порождено] Первая статья для сжатия — NCM. Результат записываем в `memory/L1.md`,
-`L2.md`, `L3.md`, а сверку — в `memory/verification.md`. Это не пересказ всех
-статей сразу: одна работа даёт законченный проверяемый артефакт. HDLM и H-CDLM
-дальше сравниваются отдельными карточками и при необходимости отдельными лестницами памяти.
-
-Память проекта по стр. 50: `diary.md` только дописывается; `STATUS.md`
-перезаписывается после каждого блока; коммиты объясняют причину изменения.
-
-## Неделя 4: онтология и граф проекта
-
-[источник] `week_4/slides.pdf`, стр. 67–68, 76–84.
-Онтология задаёт классы, отношения и правила, а граф содержит конкретные объекты.
-Компетентностные вопросы определяют, какие знания должны быть доступны из графа.
-Класс «Метод» и конкретный NCM — разные узлы; связь с источником не доказывает гипотезу.
-
-Минимум артефакта, стр. 84:
-
-- ≥3 класса, ≥2 правила;
-- ≥10 объектов, каждый связан с классом;
-- нет путаницы класса и экземпляра; связи согласованы со схемой;
-- `ontology.yaml`, `ontology/`, `notes/`, `.obsidian/`;
-- `tasks/` со статусами и итогами, раздел о графе в `AGENTS.md`;
-- коммиты двух рабочих сессий.
-
-Практика, стр. 83: сформулировать 3–5 вопросов, разобрать 5–7 понятий на классы
-и экземпляры, подготовить YAML, поставить две задачи агенту и принять результаты
-словами, выполнить проверку. Ориентир 3–5 часов. Приёмку нельзя выдумывать.
-
-[порождено] В стартовом графе уже есть методы NCM, HDLM, H-CDLM, предложенная
-адаптация, гипотеза, метрики и три реальных источника. Это рабочие объекты,
-а не подтверждение научной гипотезы. После разбора статьи добавляются проверенные
-утверждения и их происхождение. Служебные задачи не должны заменять предметное содержание.
-
-Упомянутого в слайдах `check_week4.py` в доступной папке/ZIP нет.
-Наш `check_structure.py` проверяет ссылки и PDF, но не заменяет этот скрипт:
-согласованность типов отношений и правил требует отдельной проверки.
-
-## Неделя 5: поиск и внешние графы
-
-[источник] `week_5/slides.pdf`, стр. 81, 86–88; доступен
-`week_5/artefacts/search_lab.ipynb`.
-BM25 сопоставляет слова и термины, векторный поиск — близость представлений;
-их качество нужно смотреть на собственных вопросах. Внешний граф даёт связанные
-записи, происхождение которых необходимо сохранить и проверить.
-
-Минимум артефакта, стр. 87:
-
-- библиотека по теме ≥20 документов;
-- ≥5 собственных запросов, выдачи BM25 и векторного поиска, разбор качества;
-- рабочий SPARQL-запрос;
-- результат внешнего запроса внесён в локальный граф с происхождением и связью
-  с объектом проекта;
-- `reports/my_search_report.md`, заметки в `notes/`, раздел о литературе в
-  `AGENTS.md`, коммит.
-
-Практика, стр. 86: выполнить ноутбук и свои запросы, собрать литературу,
-сделать запрос Wikidata, сверить три записи с первоисточником, записать журнал.
-Ориентир 3–4 часа. В слайдах прямо сказано, что модели поиска и инструменты готовы:
-писать новую RAG-систему с нуля не требуется.
-
-[порождено] Пять начальных вопросов для поиска записаны в
-`reports/my_search_report.md`. Релевантность выдачи оцениваем по ответу на вопрос,
-а не по тому, встречается ли в статье слово «diffusion». Для SPARQL нужен
-фактический ответ endpoint и сохранённое происхождение; заготовка запроса без
-выполнения не считается результатом.
-
-Три стартовые статьи — начало библиотеки. Реестр из двадцати URL без доступных
-текстов ещё не даёт поиск по личной библиотеке. Полный исходный текст, его версия,
-извлечённые фрагменты и привязка фрагмента к документу должны быть воспроизводимы.
-
-## Что нужно уточнить
-
-- Календарную дату и точный формат сдачи в LMS.
-- Достаточен ли Codex вместо учебного агента при оценивании.
-- Можно ли сдать отдельный приватный репозиторий с доступом преподавателю.
-- Отсутствующие материалы недели 1 и `check_week4.py`.
-
-Открытый README [учебного агента](https://github.com/andkhalov/AI4Science)
-описывает оболочку, работающую в папке проекта пользователя. Это поддерживает
-разделение установки агента и собственного проекта; форк оболочки для нашего
-старта не требуется. README не подтверждает правила приватной сдачи.
-
-Не нужно останавливать подготовку среды из-за этих уточнений: они важны для
-окончательной сборки и способа передачи пакета.
+W3 p.74 and W5 p.88: report, agent instructions, local-context query examples and
+repository/git evidence, due by week 6; 20 points and a late-submission multiplier of
+0.5. The calendar date and permission to use Codex/private submission need LMS or
+instructor confirmation. All authored files here are English; [generated], [written]
+and [source] preserve the three-way provenance distinction. If submission requires
+literal course-language labels, render them in a submission export without changing
+the research language policy. AGENTS.md is the single maintained instruction file.

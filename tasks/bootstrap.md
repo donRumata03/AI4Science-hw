@@ -1,27 +1,29 @@
 ---
-type: Задача
-status: выполнена
+type: Task
+status: done
 ---
-# Создать стартовую среду
+# Maintain a reproducible research environment
 
-## Запрос пользователя
+## Outcome
 
-[написано] Создать папку и репозиторий с коротким AGENTS.md и памятью проекта.
+[generated] Create a separate environment with a concise research contract and durable memory.
 
-## Готово, когда
+## Acceptance criteria
 
-[порождено] Есть карта требований, постановка NCM, три стартовые статьи,
-начальная схема графа, проверка структуры и исходный коммит.
+Pinned PDF catalog, navigation, verifier, diary and git snapshot.
 
-## Не входит
+## Verifier
 
-Выполнение научного разбора статей и всего ДЗ1.
+python checks/check_structure.py
 
-## Итог
+## Mode and stop
 
-Создана стартовая среда; проверка структуры вернула 0, отрицательные контроли
-сработали. Подробности — в связанном отчёте. Приёмка пользователем ещё не записана.
+Direct execution plus external check; stop after a reproducible environment.
 
-## Связи
-- тип: [[ontology/Задача]]
-- подзадачаОт: [[tasks/hw1]]
+## Boundaries
+
+Training or copying private research assets.
+
+## Links
+- type: [[ontology/Task]]
+- subtaskOf: [[tasks/research]]

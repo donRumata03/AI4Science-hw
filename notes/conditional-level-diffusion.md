@@ -1,16 +1,13 @@
 ---
-type: Метод
+type: Method
 ---
-# Conditional diffusion внутри уровня NCM
+# Conditional diffusion inside an NCM level
 
-[порождено] Предлагаемая адаптация из постановки пользователя: фиксировать
-предыдущие уровни, итеративно генерировать коды текущего уровня и передавать
-готовый уровень штатному NCM. Описание — `docs/project.md`.
-Существование локального прототипа не означает доказанную пользу метода.
+[generated] Proposed adaptation: freeze the tokenizer and earlier levels while iteratively denoising the current code level. No implementation is claimed here.
 
-## Связи
-- тип: [[ontology/Метод]]
-- основанаНа: [[notes/paper-ncm]]
-- сравниваетсяС: [[notes/ncm]]
-- оцениваетсяЧерез: [[notes/mauve]]
-- оцениваетсяЧерез: [[notes/diversity]]
+## Links
+- type: [[ontology/Method]]
+- basedOn: [[notes/paper-ncm]]
+- comparedWith: [[notes/ncm]]
+- evaluatedWith: [[notes/mauve]]
+- evaluatedWith: [[notes/diversity]]

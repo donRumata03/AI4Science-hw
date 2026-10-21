@@ -19,7 +19,7 @@ REQUIRED = (
     "docs/external-workspace.md", "library/catalog.json", "library/README.md",
     "memory/L1.md", "memory/L2.md", "memory/L3.md", "memory/verification.md",
     "ontology.yaml", ".obsidian/app.json", ".obsidian/graph.json",
-    "reports/hw1.md", "reports/my_search_report.md", "tasks/hw1.md",
+    "reports/hw1.md", "reports/my_search_report.md", "tasks/research.md",
 )
 
 

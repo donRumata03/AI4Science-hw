@@ -24,7 +24,7 @@
       "pdf_path": "library/pdf/2610.14162v1.pdf",
       "pages": 40,
       "sha256": "708a029c7f53d4f9f04ca5c93865afc9b3b5414acab3d7d9b887f313d04a5b4d",
-      "reading_status": "metadata_and_abstract_checked_pdf_downloaded",
+      "reading_status": "method_pages_reviewed_summary_audit_in_progress",
       "note_path": "notes/paper-ncm.md"
     },
     {
@@ -46,7 +46,7 @@
       "pdf_path": "library/pdf/2510.08632v1.pdf",
       "pages": 29,
       "sha256": "1da321a27361a67e695d40e71a5314faef016ee93917de549ecfafc2a091517c",
-      "reading_status": "metadata_and_abstract_checked_pdf_downloaded",
+      "reading_status": "method_pages_reviewed_summary_audit_in_progress",
       "note_path": "notes/paper-hdlm.md"
     },
     {
@@ -63,7 +63,7 @@
       "pdf_path": "library/pdf/2610.08738v1.pdf",
       "pages": 27,
       "sha256": "3f91f467a597fffc299a630d1452a8a129808a4622afd4c3937f792c4451a8fb",
-      "reading_status": "metadata_and_abstract_checked_pdf_downloaded",
+      "reading_status": "method_pages_reviewed_summary_audit_in_progress",
       "note_path": "notes/paper-h-cdlm.md"
     }
   ]

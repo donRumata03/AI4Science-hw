@@ -1,13 +1,11 @@
-# Лестница памяти
+# Research memory
 
-[порождено] Первая работа для разбора — NCM, arXiv:2610.14162v1.
-Файлы L1–L3 ниже являются шаблонами, а не выполненным сжатием.
+Primary source: NCM, arXiv:2610.14162v1, pinned in `library/catalog.json`.
+Read L3 for orientation, L2 for claims and L1 for section detail; open the PDF to verify.
 
-- [L1.md](L1.md): основные положения по разделам, с указателями на PDF.
-- [L2.md](L2.md): 5–10 тезисов со ссылками на L1.
-- [L3.md](L3.md): одна строка, сохраняющая главное и границы результата.
-- [verification.md](verification.md): минимум три сверки L2 с исходным PDF.
+- [L1](L1.md): section-level source summary.
+- [L2](L2.md): 5-10 numbered claims derived from L1.
+- [L3](L3.md): one-sentence compression without new claims.
+- [Verification](verification.md): page-level evidence, scope and corrections.
 
-Для HDLM и H-CDLM при отдельном разборе использовать подкаталоги по arXiv ID,
-не заменять ими память NCM. Нумерация страниц — страницы PDF с 1, если отдельно
-не указана печатная нумерация.
+Implementation status belongs in STATUS.md; memory does not imply completed experiments.

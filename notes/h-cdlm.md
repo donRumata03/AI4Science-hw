@@ -1,14 +1,11 @@
 ---
-type: Метод
+type: Method
 ---
 # H-CDLM
 
-[источник] Совместная непрерывная диффузия нескольких представлений текста,
-включая токены и более грубые кластеры. Начальное описание — по
-[abstract](https://arxiv.org/abs/2610.08738v1); постраничная сверка впереди.
+[generated] H-CDLM jointly denoises token and cluster representations, concatenated along channels. See paper pp.5-6.
 
-## Связи
-- тип: [[ontology/Метод]]
-- основанаНа: [[notes/paper-h-cdlm]]
-- сравниваетсяС: [[notes/ncm]]
-- сравниваетсяС: [[notes/hdlm]]
+## Links
+- type: [[ontology/Method]]
+- basedOn: [[notes/paper-h-cdlm]]
+- comparedWith: [[notes/ncm]]

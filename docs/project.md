@@ -1,62 +1,32 @@
-# Постановка проекта
+# Research scope
 
-## Источники постановки
+[generated] Can conditional diffusion improve the quality/diversity/compute frontier
+of Next-Concept Modeling by modeling dependencies inside one discrete code level?
 
-[написано] В диалоге «Ветка · Идеи NCM & Итоги команды PPOшумим» пользователь
-предложил генерировать латентные коды по одному уровню, заменив один проход
-предсказания текущего уровня на многократное условное диффузионное уточнение.
-Отдельная задача — оценка NCM метриками, включая MAUVE и diversity.
+## Primary study
 
-[источник] NCM: [arXiv:2610.14162v1](https://arxiv.org/abs/2610.14162v1),
-публичный код [HazyResearch/ncm](https://github.com/HazyResearch/ncm).
-Локальное состояние кода описано в [external-workspace.md](external-workspace.md).
+Keep the NCM tokenizer, codebooks, reconstruction operators and text decoder fixed.
+Keep levels sequential. Replace one-pass current-level prediction with iterative
+denoising conditioned on earlier levels and the visible/noisy current-level codes.
+The input is `(previous-level reconstruction, noisy current-level codes, noise state)`;
+the output is a sampled complete level. This is a hypothesis, not an implemented result.
 
-## Будущий программный результат
+Before implementation, establish the relevant paper assumptions, an evaluation
+protocol, a matched one-pass fine-tuning control, and explicit compute accounting.
+MAUVE, n-gram diversity, GenPPL, entropy, NFE and wall time serve different purposes;
+their definitions and preprocessing must be pinned before comparisons.
 
-[порождено] Условный denoiser дискретных кодов текущего уровня NCM, обучение и
-sampler, совместимые с существующими tokenizer, codebooks и текстовым decoder.
-Это формулировка направления, а не обещание реализации в рамках ДЗ1.
+## Deferred branches
 
-Обозначения: `r_k` — вектор кодов уровня `k`; `S_k` — условие, построенное из
-предыдущих уровней существующим NCM; `c` — внешний контекст, если он предусмотрен.
+- Group adjacent levels, or jointly generate a level and the beginning of the next;
+  define remasking and conditioning without ground-truth leakage.
+- Build informative continuous latent prefixes using reconstruction losses, then
+  consider joint representation/generator training.
+- Change conditioning compression, generation paths, or alignment only as separate ablations.
 
-```text
-Ранее:  предыдущие уровни → S_k → один проход → все коды r_k
-Идея:   предыдущие уровни → S_k + зашумлённый r_k + шаг → уточнение r_k
-                                            ↖ несколько шагов ↙
-Дальше: готовый r_k → штатный переход к следующему уровню → decoder текста
-```
+## Current deliverables
 
-[порождено] Вход нового компонента: фиксированное `S_k`, наблюдаемые/замаскированные
-коды текущего уровня и, при необходимости, время или доля шума. Выход: распределения
-по значениям кодов и sampler, который выдаёт полный `r_k`. Генерация всей иерархии
-остаётся последовательной по уровням. Условность здесь прежде всего означает
-условие на предыдущие уровни, даже для безусловной генерации текста.
-
-## Проверяемая гипотеза
-
-[порождено] Итеративное моделирование зависимостей внутри уровня может улучшить
-компромисс качества, разнообразия и стоимости по сравнению с одношаговым выбором
-кодов. Это гипотеза, которую нельзя объявить подтверждённой после чтения статей.
-
-Для будущего эксперимента нужны фиксированный tokenizer/decoder, единый протокол
-оценки, контроль одношагового дообучения, сравнимый бюджет и реестр seeds/NFE/времени.
-MAUVE, diversity и GenPPL из разных протоколов нельзя автоматически объединять в
-один рейтинг. В ДЗ1 достаточно описать эти требования и связать их с источниками.
-
-## Вопросы для графа и литературы
-
-1. Что именно является иерархией: обучаемые коды последовательности, группы
-   словаря или несколько совместно зашумляемых представлений?
-2. Какие зависимости внутри уровня теряются при одношаговом предсказании NCM?
-3. Какие методы допускают уточнение текущего уровня при фиксированных предыдущих?
-4. Что отличает пользу самой иерархии от дополнительного числа вычислений?
-5. Какие протоколы MAUVE, diversity и GenPPL позволяют честно сравнить варианты?
-
-## Граница ДЗ1
-
-Результат этого этапа: описанный цикл работы агента, источники, проверенное сжатие,
-онтология и граф, поиск и отчёт. `src/` может оставаться пустой папкой.
-Запуски обучения, повторение метрик из чужих логов и перенос закрытых файлов сюда
-не требуются для подготовки среды. Уже выполненная работа может стать источником
-отдельного отчёта после проверки её файлов и происхождения.
+Paper reviews, a verified summary hierarchy, literature-search records, and a concise
+research design. Model implementation has not started in this repository.
+See [context](research-context.md) for attribution and [task protocols](task-protocols.md)
+for acceptance and verification. Course packaging is tracked separately.

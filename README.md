@@ -1,63 +1,33 @@
-# AI4Science: ДЗ1 «Среда и контекст»
+# Hierarchical text generation research
 
-[порождено] Учебная среда для исследования conditional diffusion внутри уровня
-Next-Concept Modeling (NCM). Здесь собираются постановка, проверенные источники,
-память агента, граф и материалы сдачи. Экспериментальная рабочая папка:
-`C:\dev\text-diffusion`.
+[generated] Research question: can iterative conditional generation improve the joint
+distribution of codes inside an NCM level while preserving its learned tokenizer?
+This repository currently contains literature analysis and research design.
+**Model implementation: not started.** Research tooling lives in `checks/`; `src/` is empty.
 
-**Сейчас подготовлен старт репозитория. ДЗ1 ещё не выполнено.**
+## Start here
 
-## С чего начать
+- [Research scope](docs/project.md): the primary question and deferred branches.
+- [Concise context](docs/research-context.md): distilled ideas from the two chats and Notion.
+- [Current status](STATUS.md) and [file map](INDEX.md).
+- [Task protocols](docs/task-protocols.md): acceptance, verifier, mode and stop conditions.
 
-1. Прочитать [разбор требований по неделям](docs/course.md).
-2. Посмотреть [текущую постановку](docs/project.md) и [состояние](STATUS.md).
-3. Следующий содержательный блок: разобрать PDF NCM, составить L1 → L2 → L3
-   и сверить три утверждения со страницами. Шаблоны лежат в `memory/`.
-4. Затем заполнить граф предметными утверждениями и выполнить поиск по библиотеке.
+## Research outputs
 
-Проверка стартовой структуры, ссылок и целостности скачанных PDF:
+Three pinned PDFs are in `library/pdf/`; provenance and SHA-256 are in
+[catalog.json](library/catalog.json). NCM is the primary paper for the L1/L2/L3
+memory hierarchy. HDLM and H-CDLM are comparison sources, not interchangeable
+implementations of the proposed NCM experiment.
 
 ```powershell
 Set-Location C:\dev\Education\AI4Science
+python -m pip install -r checks/requirements.txt
 python checks/check_structure.py
-git log --oneline
 ```
 
-Скрипт не оценивает научную правильность, полноту онтологии и готовность ДЗ.
+Existing external experiments are documented only by pointers in
+[external-workspace.md](docs/external-workspace.md). No training is launched here.
 
-## Почему тема подходит к ДЗ1
-
-В [постановке](docs/project.md) есть будущий программный результат: условный
-генератор дискретных кодов одного уровня, зависящий от предыдущих уровней.
-Для ДЗ1 нужно подготовить воспроизводимый контекст работы над ним: источники,
-протокол проверки, сжатие статьи, граф и поиск. Обученная модель не названа среди
-сдаваемых артефактов на слайде недели 5, стр. 88.
-
-`src/` пока пуст. В `checks/` находится служебная проверка среды; это уже позволяет
-зафиксировать небольшой цикл «порождение — проверка» без запуска NCM.
-
-## Как работать с Codex
-
-Один основной чат с доступом к этой папке — достаточный старт. В начале нового
-блока агент читает `AGENTS.md`, `STATUS.md`, `INDEX.md`, затем только нужные файлы.
-Готовые [примеры запросов](docs/workflow.md) описывают конкретные результаты.
-
-Две другие разумные формы работы:
-
-- отдельный чат для разбора одной статьи, итог — проверяемые файлы памяти;
-- учебный агент AI4Science в этой же папке, если понадобится воспроизвести его
-  инструменты или сравнить оболочки. Устанавливать его внутрь этого проекта не нужно.
-
-Материалы курса используют учебного агента, но прочитанные слайды не устанавливают
-однозначно, что замена на Codex разрешена при оценивании. Этот вопрос и возможность
-приватной сдачи остаются в [списке уточнений](docs/course.md#что-нужно-уточнить).
-
-## Навигация
-
-- [INDEX.md](INDEX.md) — карта файлов.
-- [diary.md](diary.md) — дописываемый журнал.
-- [reports/hw1.md](reports/hw1.md) — будущий отчёт, сейчас шаблон.
-- [library/README.md](library/README.md) — реестр трёх стартовых статей.
-- [docs/workflow.md](docs/workflow.md) — порядок работы и запросы для следующих блоков.
-
-Репозиторий локальный. Удалённый адрес и публикация не настроены.
+Course evidence is a secondary view of the same research outputs:
+[course requirements](docs/course.md) and [weeks 1-3 report](reports/weeks-1-3.md).
+Weeks 4-5 remain future work. No remote repository is configured.

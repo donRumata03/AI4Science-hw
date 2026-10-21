@@ -1,21 +1,29 @@
 ---
-type: Задача
-status: открыта
+type: Task
+status: in_progress
 ---
-# Разобрать NCM и сжать статью
+# Summarize and verify NCM
 
-## Запрос пользователя
+## Outcome
 
-[порождено] Предлагаемая подзадача для недели 3, ещё не выполнена.
+[generated] Analyze the primary paper for the within-level dependence question.
 
-## Готово, когда
+## Acceptance criteria
 
-Есть L1 → L2 → L3 и три сверки с PDF со страницами; проверка структуры пройдена.
+Section-level L1, 5-10 L2 claims, one-sentence L3 and at least three PDF-page checks.
 
-## Не входит
+## Verifier
 
-Обучение генератора, интерпретация неподтверждённых результатов прошлых запусков.
+python checks/check_evidence.py; source-page review for semantic scope.
 
-## Связи
-- тип: [[ontology/Задача]]
-- подзадачаОт: [[tasks/hw1]]
+## Mode and stop
+
+Extraction pipeline -> summary -> claim audit; stop when all fixed criteria pass.
+
+## Boundaries
+
+Training, benchmark reproduction or claims of experimental improvement.
+
+## Links
+- type: [[ontology/Task]]
+- subtaskOf: [[tasks/research]]

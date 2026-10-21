@@ -1,27 +1,12 @@
-# Библиотека проекта
+# Research library
 
-[порождено] Стартовый набор: три научные статьи. Требуемые на неделе 5
-≥20 документов ещё не собраны; текстовый поиск ещё не выполнялся.
+Three pinned original PDFs are stored locally. Versions, official URLs, page counts
+and SHA-256 are in [catalog.json](catalog.json). Do not edit the PDFs.
 
-## Порядок чтения
+1. NCM, arXiv:2610.14162v1: primary source for the memory hierarchy.
+2. HDLM, arXiv:2510.08632v1: semantic vocabulary hierarchy and discrete diffusion.
+3. H-CDLM, arXiv:2610.08738v1: jointly diffused token/cluster representations.
 
-1. **NCM** — основная статья для L1 → L2 → L3:
-   [arXiv:2610.14162v1](https://arxiv.org/abs/2610.14162v1).
-2. **HDLM** — иерархический словарь и дискретная диффузия:
-   [arXiv:2510.08632v1](https://arxiv.org/abs/2510.08632v1).
-3. **H-CDLM** — совместная непрерывная диффузия иерархических представлений:
-   [arXiv:2610.08738v1](https://arxiv.org/abs/2610.08738v1).
-
-Пункты 2 и 3 добавлены по прямому запросу пользователя.
-Карточки пока фиксируют идентификацию и вопросы разбора, не полный обзор PDF.
-
-## Происхождение и воспроизводимость
-
-[catalog.json](catalog.json) содержит ID, версию, официальный URL, дату загрузки,
-путь к PDF, количество страниц и SHA-256. PDF скачиваются с arXiv, исходники
-не редактируются. Текст и фрагменты для поиска будут производными файлами;
-страницы и документ должны сохраняться в их метаданных.
-
-Не записывать автоматически весь набор ссылок из библиографии как прочитанные
-документы. Поиск, получение текста, разбор и верификация — разные состояния.
-Новая редакция статьи получает отдельную версию и новую контрольную сумму.
+Use page-grounded claims, not abstract-only summaries, for the completed research
+artifacts. Additional literature search and a 20-document retrieval corpus are future
+tasks, not completed merely by registering references.

@@ -1,30 +1,14 @@
-# Поиск по библиотеке: план
+# Literature retrieval: planned study
 
-[порождено] Поиск ещё не выполнялся. Ниже вопросы для будущих экспериментов,
-а не сохранённые запросы или результаты.
+[generated] Retrieval has not been executed. Initial questions:
 
-## Пять собственных запросов
+1. How does NCM construct code levels and the next-level condition?
+2. How can a conditional masked denoiser preserve a frozen code tokenizer?
+3. Which samplers revisit already selected discrete codes?
+4. How do vocabulary hierarchies differ from learned residual representations?
+5. Which MAUVE/diversity protocol choices affect comparisons?
 
-1. Как NCM строит coarse-to-fine коды и условие для очередного уровня?
-2. Как обучать conditional masked denoiser текущего уровня, сохранив tokenizer?
-3. Какие sampler допускают пересмотр выбранных дискретных кодов?
-4. Чем иерархия словаря HDLM отличается от иерархии представлений NCM и H-CDLM?
-5. Какие настройки MAUVE и diversity критичны при сравнении генераторов текста?
-
-## Что сохранить при выполнении
-
-- состав библиотеки и исключения; ≥20 реально доступных документов;
-- извлечение и нарезку текста, идентификаторы фрагментов и страниц;
-- BM25: параметры; векторы: модель, версия, параметры; размер top-k;
-- по каждому запросу: выдачи обоих методов, ручную релевантность и объяснение;
-- ошибки поиска, различия формулировок и ограничение выводов по пяти запросам;
-- три сверки метаданных с первоисточниками;
-- SPARQL-запрос, endpoint, время выполнения, исходный ответ и заметку результата
-  с происхождением и связью с объектом проекта.
-
-Будущие таблицы:
-
-| Запрос | Метод | Ранг | Документ/фрагмент | Релевантен | Основание |
-|---|---|---|---|---|---|
-
-Не подменять BM25/векторный поиск пересказом ответа общего веб-поиска.
+Retain the corpus, chunk/page IDs, BM25 settings, encoder/version, top-k, both ranked
+outputs, relevance judgments and failure analysis. For an external graph retain the
+query, endpoint, date, raw response and a linked provenance note. The future course
+target is at least 20 documents and five queries. No executed query is claimed here.

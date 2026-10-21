@@ -1,16 +1,12 @@
 ---
-type: Метод
+type: Method
 ---
 # NCM
 
-[источник] Next-Concept Modeling — двухэтапная модель с multiscale residual VQ
-и генерацией иерархии coarse-to-fine. Идентификация и начальное описание сверены
-с [abstract](https://arxiv.org/abs/2610.14162v1) и публичным README.
-Постраничный разбор статьи ещё не выполнен.
+[generated] NCM uses learned residual code levels and a one-pass factorized within-level generator. See paper pp.6-7.
 
-## Связи
-- тип: [[ontology/Метод]]
-- основанаНа: [[notes/paper-ncm]]
-- сравниваетсяС: [[notes/conditional-level-diffusion]]
-- оцениваетсяЧерез: [[notes/mauve]]
-- оцениваетсяЧерез: [[notes/diversity]]
+## Links
+- type: [[ontology/Method]]
+- basedOn: [[notes/paper-ncm]]
+- evaluatedWith: [[notes/mauve]]
+- evaluatedWith: [[notes/diversity]]

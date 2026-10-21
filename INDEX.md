@@ -1,28 +1,27 @@
-# Где что лежит
+# File map
 
-| Файл или папка | Назначение |
+| Location | Purpose |
 |---|---|
-| [AGENTS.md](AGENTS.md) | Короткие правила работы |
-| [STATUS.md](STATUS.md) | Текущее состояние, следующий блок и ограничения |
-| [diary.md](diary.md) | История решений, проверок и итогов; только дописывается |
-| [docs/course.md](docs/course.md) | Что подтверждено слайдами и что сдавать по неделям |
-| [docs/project.md](docs/project.md) | Исследовательский вопрос и будущий программный результат |
-| [docs/external-workspace.md](docs/external-workspace.md) | Указатели на существующие эксперименты |
-| [docs/workflow.md](docs/workflow.md) | Порядок работы с агентом |
-| [library/README.md](library/README.md) | Порядок чтения и правила библиотеки |
-| [library/catalog.json](library/catalog.json) | Идентификаторы, версии и SHA-256 PDF |
-| [memory/README.md](memory/README.md) | Как заполнять L1, L2, L3 и сверку |
-| [ontology.yaml](ontology.yaml) | Начальная схема классов, отношений и правил |
-| [ontology/](ontology/) | Заметки классов для Obsidian |
-| [notes/](notes/) | Предметные объекты, источники и вопросы |
-| [tasks/](tasks/) | Задачи со статусами, условиями готовности и итогами |
-| [reports/hw1.md](reports/hw1.md) | Состав сдаваемого отчёта |
-| [reports/my_search_report.md](reports/my_search_report.md) | Будущее сравнение поиска |
-| [checks/check_structure.py](checks/check_structure.py) | Служебная проверка, не оценка всего ДЗ |
-| [data/README.md](data/README.md) | Граница исходных данных |
-| [src/](src/) | Резерв для собственного кода, сейчас пуст |
-| [results/](results/) | Результаты воспроизводимых запусков, сейчас пуст |
-| [paper/](paper/) | Резерв для следующего этапа курса |
-
-Тексты статей находятся в `library/pdf/`; целиком в контекст их загружать не нужно.
-Код NCM и закрытый LDLM Flow Map остаются в отдельной рабочей папке.
+| [AGENTS.md](AGENTS.md) | Short research contract and English-language rule |
+| [STATUS.md](STATUS.md) | Current research state and next action |
+| [diary.md](diary.md) | Append-only decisions and verification history |
+| [docs/project.md](docs/project.md) | Scientific question and experiment boundaries |
+| [docs/research-context.md](docs/research-context.md) | Concise context distilled from chats and Notion |
+| [docs/source-register.json](docs/source-register.json) | Source IDs, URLs and local paths |
+| [docs/task-protocols.md](docs/task-protocols.md) | Task-specific acceptance, verifiers and modes |
+| [docs/workflow.md](docs/workflow.md) | Research workflow and example requests |
+| [docs/external-workspace.md](docs/external-workspace.md) | External experiment pointers |
+| [docs/course.md](docs/course.md) | Course criteria, separate from the research objective |
+| [library/README.md](library/README.md) | Reading order and source handling |
+| [library/catalog.json](library/catalog.json) | Pinned PDF metadata and hashes |
+| [memory/README.md](memory/README.md) | NCM L1/L2/L3 and evidence navigation |
+| [ontology.yaml](ontology.yaml) | Initial graph schema; week 4 remains pending |
+| [ontology/](ontology/) | Class notes |
+| [notes/](notes/) | Methods, hypotheses, metrics and source cards |
+| [tasks/](tasks/) | Research tasks with acceptance and verification |
+| [reports/](reports/) | Research and course evidence reports |
+| [checks/](checks/) | Research infrastructure checks, not model implementation |
+| [data/README.md](data/README.md) | Data boundary |
+| [src/](src/) | Reserved model implementation; currently empty |
+| [results/](results/) | Reserved experimental results; currently empty |
+| [paper/](paper/) | Reserved manuscript workspace |

@@ -1,14 +1,11 @@
 ---
-type: Метод
+type: Method
 ---
 # HDLM
 
-[источник] Иерархия словаря: переходы от подробных токенов к более грубым
-семантическим предкам в прямом процессе. Начальное описание — по
-[abstract](https://arxiv.org/abs/2510.08632v1); постраничная сверка впереди.
+[generated] HDLM uses vocabulary ancestors as discrete diffusion states; this is not a learned NCM residual hierarchy. See paper pp.2-6.
 
-## Связи
-- тип: [[ontology/Метод]]
-- основанаНа: [[notes/paper-hdlm]]
-- сравниваетсяС: [[notes/ncm]]
-- сравниваетсяС: [[notes/h-cdlm]]
+## Links
+- type: [[ontology/Method]]
+- basedOn: [[notes/paper-hdlm]]
+- comparedWith: [[notes/ncm]]

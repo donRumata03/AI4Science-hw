@@ -1,28 +1,25 @@
-# Состояние на 2026-10-21
+# Research status - 2026-10-21
 
-## Где мы
+## Current state
 
-Стартовый репозиторий ДЗ1 подготовлен. Изучены слайды недель 2–5,
-проверены страницы артефактов и итоговая формулировка ДЗ1.
-Есть короткий договор, карта требований и проекта, память, шаблоны отчётов,
-8 классов и 16 типизированных объектов графа (10 предметных узлов, 5 задач, отчёт).
-Скачаны три PDF: NCM (2610.14162v1), HDLM (2510.08632v1), H-CDLM (2610.08738v1).
-Структура, 87 локальных ссылок и SHA-256 PDF проверены; отрицательные контроли пройдены.
-Старт фиксируется одним исходным коммитом; текущий SHA показывает `git log -1`.
+Phase: literature review, summarization and research design.
+Model implementation in this repository: **not started**. No training runs or new
+model-quality measurements have been performed here. The external text-diffusion
+workspace contains separate historical experiments and is not modified by this task.
 
-## Дальше
+The research-first English migration is complete. Three source PDFs are pinned locally.
+Task contracts cover paper review, summarization, literature search and research design.
+The structure verifier passed (82 local links); the English prose scan passed.
 
-1. Разобрать NCM: L1 по разделам → 5–10 тезисов L2 → одна строка L3;
-   сверить минимум три тезиса со страницами PDF.
-2. Сопоставить NCM с HDLM и H-CDLM по заранее записанным вопросам.
-3. Провести две реальные сессии развития графа, зафиксировать проверку и приёмку.
-4. Довести библиотеку до ≥20 документов и выполнить сравнение поиска и SPARQL.
+## Next
 
-## Действует
+1. Complete NCM L1 -> L2 -> L3 and page-grounded claim verification.
+2. Complete a bounded NCM / HDLM / H-CDLM comparison.
+3. Expand literature search only after the core research question is fixed.
 
-- Экспериментальная постановка: условная диффузия внутри одного уровня NCM.
-- Существующие эксперименты и их незакоммиченные изменения остаются в `text-diffusion`.
-- Нет результатов обучения, произведённых в этом учебном репозитории.
-- Шаблоны памяти и отчёта не считаются выполненными артефактами.
-- Слайдов недели 1 и части упомянутых учебных файлов нет в доступном архиве.
-- Возможность сдавать с Codex и приватным доступом пока не подтверждена правилами.
+## Constraints and unknowns
+
+- Notion and chat ideas are proposals; paper claims require primary-source checks.
+- Week 1 slides and the course's check_week4.py are unavailable.
+- A typed graph scaffold is present; weeks 4-5 are not declared complete.
+- No external training authorization or historical result is inferred from this status.

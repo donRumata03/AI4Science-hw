@@ -1,13 +1,12 @@
 ---
-type: Гипотеза
+type: Hypothesis
 ---
-# Польза зависимостей внутри уровня
+# Within-level dependence hypothesis
 
-[порождено] Итеративная условная генерация кодов уровня может улучшить
-качество/разнообразие относительно одношагового генератора при явно измеренной
-добавочной стоимости. Статус: не проверена в учебном проекте.
+[generated] Iterative conditional generation may improve the quality/diversity/compute
+frontier relative to one-pass code generation. This is not an established result.
 
-## Связи
-- тип: [[ontology/Гипотеза]]
-- основанаНа: [[notes/paper-ncm]]
-- проверяетсяМетодом: [[notes/conditional-level-diffusion]]
+## Links
+- type: [[ontology/Hypothesis]]
+- basedOn: [[notes/paper-ncm]]
+- testedBy: [[notes/conditional-level-diffusion]]

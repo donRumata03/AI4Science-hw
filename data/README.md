@@ -1,9 +1,6 @@
-# Данные
+# Data boundary
 
-`raw/` зарезервирована для исходных данных, которые не редактируют на месте.
-Сейчас она пуста. Датасеты NCM не копировались из внешней рабочей папки.
-
-`.gitignore` исключает содержимое `raw/`, кроме `.gitkeep`; это предотвращает
-случайное добавление обычной командой git, но не запрещает запись и `git add -f`.
-Если появятся реальные исходные данные, отдельно определить их происхождение,
-лицензию, контрольные суммы и необходимый механизм защиты.
+`raw/` is reserved for immutable source data and is currently empty. NCM datasets
+were not copied from the external workspace. `.gitignore` excludes raw content apart
+from .gitkeep; it is not a filesystem write restriction. Define provenance, licensing
+and integrity checks before adding research data.

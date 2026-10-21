@@ -1,54 +1,35 @@
-# Рабочие блоки с агентом
+# Research workflow
 
-[порождено] Стартовый репозиторий подготовлен. Дальше каждый блок оставляет
-конкретный результат, запись проверки и следующий шаг. Ниже — предлагаемые
-запросы; они ещё не выполнялись и не считаются журналом фактической работы.
+1. Read AGENTS.md, STATUS.md and INDEX.md.
+2. Select one research task and retain its fixed acceptance criteria.
+3. Load only its source pages and relevant notes.
+4. Produce a bounded artifact; label source facts, user intent and generated proposals.
+5. Run its verifier and review scientific scope manually against the cited pages.
+6. Rewrite STATUS.md, append diary.md and commit the reason for the change.
 
-## 1. Одна статья и лестница памяти
-
-```text
-Прочитай AGENTS.md, STATUS.md и INDEX.md. Разбери PDF NCM из library/catalog.json.
-Создай L1 по разделам, L2 из 5–10 тезисов и L3 в одну строку в memory/.
-Минимум три тезиса L2 сверь с PDF: номер страницы, раздел, что проверено,
-ограничение или исправление. Различай заявления авторов и собственные выводы.
-Выполни проверку структуры, обнови STATUS.md и допиши diary.md.
-Готово, когда есть связная лестница памяти и минимум три сверенных тезиса.
-```
-
-## 2. Сопоставление иерархий
+## Example: paper review
 
 ```text
-На основе NCM, HDLM (2510.08632) и H-CDLM (2610.08738) сравни:
-что является иерархией, как она строится, что зашумляется, каков порядок генерации,
-как представлена условность и как проверяется польза иерархии.
-У каждой строки сравнения укажи раздел и страницу статьи.
-Не переноси выводы с кластеров словаря на обучаемые NCM-коды без обоснования.
-Сохрани comparison в reports/ и обнови карточки источников и граф.
+Review HDLM against the within-level NCM hypothesis. Identify the represented random
+variables, forward/reverse process and conditioning. Cite PDF pages. State which
+parts transfer to fixed NCM codes and which would require a different representation.
+Acceptance and verifier: tasks/compare-hierarchies.md. Write all artifacts in English.
 ```
 
-## 3. Две реальные сессии работы с графом
-
-Первая задача: добавить из разбора NCM понятия и связи, отвечающие на
-компетентностные вопросы. Проверить классы/экземпляры и происхождение.
-После проверки пользователь принимает результат или просит исправления.
-
-Вторая задача: добавить сравнение с двумя статьями, снова проверить граф и
-зафиксировать отдельный коммит. Не создавать фиктивные сессии и приёмки ради количества.
-
-## 4. Библиотека и поиск
+## Example: summarization
 
 ```text
-Расширь тематическую библиотеку до минимум 20 проверенных документов.
-Используй готовый учебный search_lab.ipynb либо эквивалентный воспроизводимый поиск.
-Выполни пять запросов из reports/my_search_report.md с BM25 и векторным поиском.
-Сохрани параметры, выдачи и разбор релевантности. Отдельно выполни SPARQL,
-сохрани запрос, endpoint, дату, ответ и связь с нашим графом. Сверь три записи.
-Готово, когда все утверждения отчёта опираются на сохранённые результаты.
+Summarize the main NCM paper by section into memory/L1.md, reduce it to 5-10 claims
+in L2.md and one sentence in L3.md. Verify at least three claims from PDF pages;
+separate model factorization from assumptions about real data. Record corrections.
+Acceptance and verifier: tasks/read-ncm.md. Update status and append the diary.
 ```
 
-## 5. Сборка сдачи
+## Example: literature search (not executed yet)
 
-Проверить `reports/hw1.md` по `docs/course.md`, убрать формулировки о готовности
-там, где есть лишь шаблон. Добавить фактические запросы и ответы проверки,
-коммиты/метки, источник каждого численного результата. Затем выбрать способ
-передачи по правилам курса. Никакая публикация для локальной подготовки не нужна.
+```text
+Find up to five primary papers relevant to remasking discrete latent codes. Retain
+the query, source identifiers, access status and relevance decisions. Do not turn
+abstracts or suggested references into claims of a completed full-text review.
+Acceptance and verifier: tasks/search-library.md.
+```

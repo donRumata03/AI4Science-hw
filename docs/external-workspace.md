@@ -1,32 +1,20 @@
-# Существующая рабочая папка
+# External workspace boundary
 
-[источник] Локальный осмотр 2026-10-21; файлы только читались.
+[source] Read-only inspection on 2026-10-21.
 
-`C:\dev\text-diffusion` — общая рабочая папка нескольких проектов; сама её
-корневая папка не является git-репозиторием.
-
-| Путь | Что установлено при осмотре |
+| Path | Observed role |
 |---|---|
-| `C:\dev\text-diffusion\ncm` | NCM и локальные изменения для conditional masked diffusion; есть staged, unstaged и untracked файлы |
-| `C:\dev\text-diffusion\ncm-official` | Отдельный checkout публичного NCM; при осмотре рабочее дерево чистое |
-| `C:\dev\text-diffusion\ldlm-flowmap` | Отдельный проект команды; считать закрытым контекстом |
-| `C:\dev\text-diffusion\comparison` | Скрипты сравнения и аудита; их результаты здесь заново не проверялись |
+| `C:\dev\text-diffusion` | Parent workspace, not itself a git repository |
+| `C:\dev\text-diffusion\ncm` | NCM checkout with staged, unstaged and untracked experimental edits |
+| `C:\dev\text-diffusion\ncm-official` | Separate clean public NCM checkout at the time of inspection |
+| `C:\dev\text-diffusion\ldlm-flowmap` | Team project; treat as private research context |
+| `C:\dev\text-diffusion\comparison` | Existing evaluation/audit scripts and historical outputs |
 
-Оба checkout NCM указывают на исходный коммит
-`c70274273f489abc73832b2b98584a8483b6b203`. В изменённом `ncm/` этот SHA не
-описывает все локальные правки и сам по себе не воспроизводит эксперимент.
+Both NCM checkouts had base commit `c70274273f489abc73832b2b98584a8483b6b203`.
+That SHA does not capture the modified checkout's uncommitted experiment.
+Useful pointers are `ncm/experiments/README.md` and `ncm/experiments/PILOT10K.md`.
 
-Полезные указатели для следующего исследования:
-
-- `ncm/README.md` — постановка публичного NCM и evaluation-пути;
-- `ncm/experiments/README.md` — локальная адаптация и аудит протоколов;
-- `ncm/experiments/PILOT10K.md` — описание пилота на 10 000 обновлений;
-- `comparison/` — метрики и отчёты сравнения.
-
-Прочитанные локальные README сообщают о предыдущих запусках, но в этом
-репозитории мы не проверяли их полноту и не переносили численные результаты.
-Разрешения на запуски из другого диалога не считаются новой задачей этого ДЗ.
-
-В учебный проект переносим проверенные выводы с происхождением. Копирование кода,
-логов, весов и датасетов не нужно для старта. Внешние абсолютные пути остаются
-текстовыми указателями: преподавателю они не заменяют включённые в пакет материалы.
+These files establish that external work exists, not that it was reverified here.
+The current repository's **model implementation is not started**. Only research
+tooling, source analysis and documentation are being changed. No private code,
+weights, datasets or numerical experiment results are copied into this repository.
