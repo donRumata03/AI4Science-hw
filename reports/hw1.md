@@ -28,6 +28,38 @@ Wikidata SELECT returned five machine-learning instance-class bindings. Query,
 endpoint, date and raw response are retained and linked to the research methods.
 Three seed metadata records were checked against PDF page 1 (title, ID, first author).
 
+## Examples of queries to local context
+
+Five queries run against the local library; the table shows each method's first result.
+
+| Query | BM25 top result | Vector top result |
+|---|---|---|
+| How does NCM construct hierarchical residual codes and condition each level? | NCM | NCM |
+| How can masked diffusion generate discrete codes jointly with a frozen tokenizer? | NCM | Re-evaluating Confidence Remasking in Masked Diffusion Language Models |
+| Which remasking samplers can revise already generated diffusion tokens? | CoDR: Training-Free Confidence-Drift Remasking | Re-evaluating Confidence Remasking in Masked Diffusion Language Models |
+| How do semantic vocabulary clusters differ from learned latent hierarchies? | Aligned and realistic latent diffusion for text-to-motion generation | HDLM (2510.08632) |
+| How should MAUVE and diversity evaluate generated text beyond perplexity? | MAUVE: Measuring the Gap Between Neural Text and Human Text | On the Usefulness of Embeddings, Clusters and Strings for Text Generator Evaluation |
+
+Both methods retrieve NCM for the architecture query. For remasking, their top-three
+results share NAVIRA and Remask, Don't Replace. For hierarchy comparison, vector
+search retrieves HDLM and H-CDLM, while BM25 ranks an off-topic motion paper first.
+The evaluation query retrieves MAUVE through both methods. Full rankings and scores:
+[search report](my_search_report.md).
+
+[source] Wikidata query executed on 2026-10-21 at `https://query.wikidata.org/sparql`:
+
+```sparql
+SELECT ?item ?itemLabel ?class ?classLabel WHERE {
+ VALUES ?item { wd:Q2539 }
+ ?item wdt:P31 ?class .
+ SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+```
+
+Five bindings were returned. The query note links to the local machine-learning
+concept, which is connected to NCM through `researchField`; endpoint, date and raw
+response are retained in `library/retrieval/`.
+
 ## Verification
 Run: `python checks/check_structure.py`, `check_evidence.py`, `check_graph.py`, and
 `check_week5.py` (the latter three also reside in checks/). Actual outputs: checks.txt.

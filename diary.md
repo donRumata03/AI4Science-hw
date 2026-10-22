@@ -87,3 +87,18 @@ The user supplied the authoritative final report in outputs/AI4Science-HW1-repor
 and explicitly requested commit/push to donRumata03/AI4Science-hw. Copied that file
 byte-for-byte to reports/hw1.md without rewriting its content. The destination
 repository was empty when inspected; the existing main branch will be published.
+
+## 2026-10-22 - add concise query examples to the report
+
+Added five executed library queries with first BM25/vector results, a brief comparison
+and the executed Wikidata SPARQL query. Preserved the user-edited report narrative;
+synchronized output copies and the two-file submission archive.
+
+[source] python checks/check_structure.py passed: 158 local links and pinned PDF
+digests. No commit or push was performed, as requested.
+
+## 2026-10-22 - commit the report format adaptation
+
+The user requested a local commit with the exact message
+`adapt report format after deadline`. The commit includes the concise report
+examples and their status/diary records. No push was requested for this block.
